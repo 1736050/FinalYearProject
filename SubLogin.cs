@@ -42,18 +42,29 @@ namespace FinalYearProject
                 teacherformop.Show();
                 this.Hide();
             }
-
-            if (SubUsertypeCb.Text == "Admin")
+            
+            else if (SubUsertypeCb.Text == "Admin")
             {
                 Adminform adminformop = new Adminform();
                 adminformop.Show();
                 this.Hide();
             }
+            
+            else
+                MessageBox.Show("please select a user type");
+
+            
         }
-        private void Closewindowbt_Click(object sender, EventArgs e)
+      
+
+        private void AdminFormlobtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Closewindowbt_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

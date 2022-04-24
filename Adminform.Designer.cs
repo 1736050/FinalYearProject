@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.closebtn = new System.Windows.Forms.Button();
             this.StudentFormlb = new System.Windows.Forms.Label();
             this.AdminFormlobtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,21 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // closebtn
-            // 
-            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.closebtn.FlatAppearance.BorderSize = 0;
-            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.closebtn.Location = new System.Drawing.Point(736, 3);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(26, 23);
-            this.closebtn.TabIndex = 13;
-            this.closebtn.Text = "X";
-            this.closebtn.UseVisualStyleBackColor = false;
-            this.closebtn.Click += new System.EventHandler(this.closebt_Click);
             // 
             // StudentFormlb
             // 
@@ -98,6 +82,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.Panelnav);
             this.panel1.Controls.Add(this.Recorddashbtn);
             this.panel1.Controls.Add(this.Attendencedashbtn);
             this.panel1.Controls.Add(this.Traindashbtn);
@@ -226,7 +211,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.Panelnav);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.StudentFormlb);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -240,8 +224,8 @@
             this.Panelnav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.Panelnav.Location = new System.Drawing.Point(0, 193);
             this.Panelnav.Name = "Panelnav";
-            this.Panelnav.Size = new System.Drawing.Size(3, 200);
-            this.Panelnav.TabIndex = 13;
+            this.Panelnav.Size = new System.Drawing.Size(3, 100);
+            this.Panelnav.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -257,7 +241,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel3.Controls.Add(this.Softwarenamelb);
-            this.panel3.Controls.Add(this.closebtn);
             this.panel3.Controls.Add(this.AdminFormlobtn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(186, 0);
@@ -303,7 +286,6 @@
         #endregion
         private System.Windows.Forms.Label StudentFormlb;
         private System.Windows.Forms.Button AdminFormlobtn;
-        private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Studentdashbtn;
         private System.Windows.Forms.Panel panel2;

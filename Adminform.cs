@@ -27,6 +27,7 @@ namespace FinalYearProject
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25, 25));
+            // when form open the panel nav will highlight the side of dash button
             Panelnav.Height = Studentdashbtn.Height;
             Panelnav.Top = Studentdashbtn.Top;
             Panelnav.Left = Studentdashbtn.Left;
@@ -45,11 +46,6 @@ namespace FinalYearProject
             this.Hide();
         }
 
-        private void closebt_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Adminform_Load(object sender, EventArgs e)
         {
 
@@ -57,6 +53,7 @@ namespace FinalYearProject
 
         private void Studentdashbtn_Click(object sender, EventArgs e)
         {
+            // when buttonis clicked panel nav will highlight the side of this button.
             Panelnav.Height = Studentdashbtn.Height;
             Panelnav.Top = Studentdashbtn.Top;
             Panelnav.Left = Studentdashbtn.Left;
@@ -113,7 +110,8 @@ namespace FinalYearProject
 
         private void Studentdashbtn_Leave(object sender, EventArgs e)
         {
-            Studentdashbtn.BackColor = Color.FromArgb(24, 30, 54);
+            // the colour of the button will be 24,30,54 onece it is clicked, the colour of button was 46, 51, 73 before it was clicked.
+            Studentdashbtn.BackColor = Color.FromArgb(24, 30, 54); 
         }
 
         private void Teacherdashbtn_Leave(object sender, EventArgs e)
