@@ -70,6 +70,7 @@
     <Compile Include="FeeForm.Designer.cs">
       <DependentUpon>FeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="loadForm.cs" />
     <Compile Include="MisForm.cs">
       <SubType>Form</SubType>
     </Compile>

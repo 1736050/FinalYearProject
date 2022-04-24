@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AdminFormlb = new System.Windows.Forms.Label();
+            this.panelteachermain = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -150,12 +151,22 @@
             this.AdminFormlb.Text = "User Type: Teacher";
             this.AdminFormlb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelteachermain
+            // 
+            this.panelteachermain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(50)))));
+            this.panelteachermain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelteachermain.Location = new System.Drawing.Point(186, 56);
+            this.panelteachermain.Name = "panelteachermain";
+            this.panelteachermain.Size = new System.Drawing.Size(765, 521);
+            this.panelteachermain.TabIndex = 19;
+            // 
             // Teacherform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.panelteachermain);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -183,5 +194,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label AdminFormlb;
+        private System.Windows.Forms.Panel panelteachermain;
     }
 }

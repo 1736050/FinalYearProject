@@ -25,6 +25,7 @@ namespace FinalYearProject
         public Teacherform()
         {
             InitializeComponent();
+            loadformpv(new AttendenceForm());
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             Panelnav.Height = Teacherattendencedashbtn.Height;
             Panelnav.Top = Teacherattendencedashbtn.Top;
@@ -42,6 +43,7 @@ namespace FinalYearProject
 
         private void Teacherattendencedashbtn_Click(object sender, EventArgs e)
         {
+            loadformpv(new AttendenceForm());
             Panelnav.Height = Teacherattendencedashbtn.Height;
             Panelnav.Top = Teacherattendencedashbtn.Top;
             Panelnav.Left = Teacherattendencedashbtn.Left;
@@ -51,6 +53,18 @@ namespace FinalYearProject
         private void Teacherattendencedashbtn_Leave(object sender, EventArgs e)
         {
             Teacherattendencedashbtn.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        public void loadformpv(object Form)
+        {
+            if (this.panelteachermain.Controls.Count > 0)
+                this.panelteachermain.Controls.RemoveAt(0);
+            Form forminpv = Form as Form;
+            forminpv.TopLevel = false;
+            forminpv.Dock = DockStyle.Fill;
+            this.panelteachermain.Controls.Add(forminpv);
+            this.panelteachermain.Tag = forminpv;
+            forminpv.Show();
         }
     }
 }
