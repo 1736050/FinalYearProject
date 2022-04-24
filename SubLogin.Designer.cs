@@ -57,7 +57,7 @@ namespace FinalYearProject
             // SubUserTypelb
             // 
             this.SubUserTypelb.AutoSize = true;
-            this.SubUserTypelb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.SubUserTypelb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.SubUserTypelb.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubUserTypelb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.SubUserTypelb.Location = new System.Drawing.Point(332, 254);
@@ -68,6 +68,9 @@ namespace FinalYearProject
             // 
             // SubUsertypeCb
             // 
+            this.SubUsertypeCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SubUsertypeCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.SubUsertypeCb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.SubUsertypeCb.FormattingEnabled = true;
             this.SubUsertypeCb.Items.AddRange(new object[] {
             "Student",
@@ -75,7 +78,7 @@ namespace FinalYearProject
             "Admin"});
             this.SubUsertypeCb.Location = new System.Drawing.Point(426, 256);
             this.SubUsertypeCb.Name = "SubUsertypeCb";
-            this.SubUsertypeCb.Size = new System.Drawing.Size(159, 17);
+            this.SubUsertypeCb.Size = new System.Drawing.Size(159, 23);
             this.SubUsertypeCb.TabIndex = 7;
             this.SubUsertypeCb.Tag = "";
             // 

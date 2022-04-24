@@ -27,6 +27,12 @@ namespace FinalYearProject
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25, 25));
+            
+           /* StudentRegistrationForm studentregistrationformpv = new StudentRegistrationForm() { TopLevel = false, TopMost = true };
+            studentregistrationformpv.FormBorderStyle = FormBorderStyle.None;
+            paneladminmain.Controls.Add(studentregistrationformpv);
+            studentregistrationformpv.Show();
+           */
             // when form open the panel nav will highlight the side of dash button
             Panelnav.Height = Studentdashbtn.Height;
             Panelnav.Top = Studentdashbtn.Top;
@@ -53,15 +59,29 @@ namespace FinalYearProject
 
         private void Studentdashbtn_Click(object sender, EventArgs e)
         {
+            StudentRegistrationForm studentregistrationformpv = new StudentRegistrationForm() { TopLevel = false, TopMost = true };
+            studentregistrationformpv.FormBorderStyle = FormBorderStyle.None;
+            paneladminmain.Controls.Add(studentregistrationformpv);
+            studentregistrationformpv.Show();
+
             // when buttonis clicked panel nav will highlight the side of this button.
             Panelnav.Height = Studentdashbtn.Height;
             Panelnav.Top = Studentdashbtn.Top;
             Panelnav.Left = Studentdashbtn.Left;
             Studentdashbtn.BackColor = Color.FromArgb(46, 51, 73);
+
+            studentregistrationformpv.Hide();
         }
 
         private void Teacherdashbtn_Click(object sender, EventArgs e)
         {
+            
+            
+            TeacherRegistrationForm teacherregistrationformpv = new TeacherRegistrationForm() { TopLevel = false, TopMost = true };
+            teacherregistrationformpv.FormBorderStyle = FormBorderStyle.None;
+            paneladminmain.Controls.Add(teacherregistrationformpv);
+            teacherregistrationformpv.Show();
+
             Panelnav.Height = Teacherdashbtn.Height;
             Panelnav.Top = Teacherdashbtn.Top;
             Panelnav.Left = Teacherdashbtn.Left;
@@ -110,7 +130,7 @@ namespace FinalYearProject
 
         private void Studentdashbtn_Leave(object sender, EventArgs e)
         {
-            // the colour of the button will be 24,30,54 onece it is clicked, the colour of button was 46, 51, 73 before it was clicked.
+            // the colour of the button will be same as panel once another button is clicked.
             Studentdashbtn.BackColor = Color.FromArgb(24, 30, 54); 
         }
 

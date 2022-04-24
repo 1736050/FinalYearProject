@@ -40,13 +40,14 @@
             this.Studentdashbtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Panelnav = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Softwarenamelb = new System.Windows.Forms.Label();
+            this.paneladminmain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // StudentFormlb
@@ -227,16 +228,6 @@
             this.Panelnav.Size = new System.Drawing.Size(3, 100);
             this.Panelnav.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FinalYearProject.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -259,6 +250,25 @@
             this.Softwarenamelb.TabIndex = 15;
             this.Softwarenamelb.Text = "College Management and Face Recognition System";
             // 
+            // paneladminmain
+            // 
+            this.paneladminmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.paneladminmain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.paneladminmain.Location = new System.Drawing.Point(186, 56);
+            this.paneladminmain.Name = "paneladminmain";
+            this.paneladminmain.Size = new System.Drawing.Size(765, 521);
+            this.paneladminmain.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinalYearProject.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Adminform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +276,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.paneladminmain);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -276,9 +287,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,5 +310,6 @@
         private System.Windows.Forms.Panel Panelnav;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label Softwarenamelb;
+        private System.Windows.Forms.Panel paneladminmain;
     }
 }

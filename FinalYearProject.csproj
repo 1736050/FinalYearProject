@@ -58,6 +58,12 @@
     <Compile Include="Studentform.Designer.cs">
       <DependentUpon>Studentform.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationForm.Designer.cs">
+      <DependentUpon>StudentRegistrationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +78,20 @@
     <Compile Include="Teacherform.Designer.cs">
       <DependentUpon>Teacherform.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherRegistrationForm.Designer.cs">
+      <DependentUpon>TeacherRegistrationForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adminform.resx">
       <DependentUpon>Adminform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Studentform.resx">
       <DependentUpon>Studentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegistrationForm.resx">
+      <DependentUpon>StudentRegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubLogin.resx">
       <DependentUpon>SubLogin.cs</DependentUpon>
@@ -93,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="Teacherform.resx">
       <DependentUpon>Teacherform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherRegistrationForm.resx">
+      <DependentUpon>TeacherRegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
