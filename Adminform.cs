@@ -79,6 +79,7 @@ namespace FinalYearProject
 
         private void Feedashbtn_Click(object sender, EventArgs e)
         {
+            loadformpv(new FeeForm());
             Panelnav.Height = Feedashbtn.Height;
             Panelnav.Top = Feedashbtn.Top;
             Panelnav.Left = Feedashbtn.Left;
@@ -87,6 +88,7 @@ namespace FinalYearProject
 
         private void Examdashbtn_Click(object sender, EventArgs e)
         {
+            loadformpv(new ExamForm());
             Panelnav.Height = Examdashbtn.Height;
             Panelnav.Top = Examdashbtn.Top;
             Panelnav.Left = Examdashbtn.Left;
@@ -95,6 +97,7 @@ namespace FinalYearProject
 
         private void Traindashbtn_Click(object sender, EventArgs e)
         {
+            loadformpv(new TrainStudentImagesForm());
             Panelnav.Height = Traindashbtn.Height;
             Panelnav.Top = Traindashbtn.Top;
             Panelnav.Left = Traindashbtn.Left;

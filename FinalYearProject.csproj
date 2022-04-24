@@ -58,6 +58,18 @@
     <Compile Include="AttendenceForm.Designer.cs">
       <DependentUpon>AttendenceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamForm.Designer.cs">
+      <DependentUpon>ExamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeForm.Designer.cs">
+      <DependentUpon>FeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +108,23 @@
     <Compile Include="TeacherRegistrationForm.Designer.cs">
       <DependentUpon>TeacherRegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainStudentImagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainStudentImagesForm.Designer.cs">
+      <DependentUpon>TrainStudentImagesForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adminform.resx">
       <DependentUpon>Adminform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AttendenceForm.resx">
       <DependentUpon>AttendenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamForm.resx">
+      <DependentUpon>ExamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeForm.resx">
+      <DependentUpon>FeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MisForm.resx">
       <DependentUpon>MisForm.cs</DependentUpon>
@@ -129,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherRegistrationForm.resx">
       <DependentUpon>TeacherRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainStudentImagesForm.resx">
+      <DependentUpon>TrainStudentImagesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
