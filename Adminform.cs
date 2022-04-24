@@ -28,11 +28,7 @@ namespace FinalYearProject
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25, 25));
             
-           /* StudentRegistrationForm studentregistrationformpv = new StudentRegistrationForm() { TopLevel = false, TopMost = true };
-            studentregistrationformpv.FormBorderStyle = FormBorderStyle.None;
-            paneladminmain.Controls.Add(studentregistrationformpv);
-            studentregistrationformpv.Show();
-           */
+           
             // when form open the panel nav will highlight the side of dash button
             Panelnav.Height = Studentdashbtn.Height;
             Panelnav.Top = Studentdashbtn.Top;
@@ -59,10 +55,7 @@ namespace FinalYearProject
 
         private void Studentdashbtn_Click(object sender, EventArgs e)
         {
-            StudentRegistrationForm studentregistrationformpv = new StudentRegistrationForm() { TopLevel = false, TopMost = true };
-            studentregistrationformpv.FormBorderStyle = FormBorderStyle.None;
-            paneladminmain.Controls.Add(studentregistrationformpv);
-            studentregistrationformpv.Show();
+            loadformpv(new StudentRegistrationForm());
 
             // when buttonis clicked panel nav will highlight the side of this button.
             Panelnav.Height = Studentdashbtn.Height;
@@ -70,17 +63,12 @@ namespace FinalYearProject
             Panelnav.Left = Studentdashbtn.Left;
             Studentdashbtn.BackColor = Color.FromArgb(46, 51, 73);
 
-            studentregistrationformpv.Hide();
+           
         }
 
         private void Teacherdashbtn_Click(object sender, EventArgs e)
         {
-            
-            
-            TeacherRegistrationForm teacherregistrationformpv = new TeacherRegistrationForm() { TopLevel = false, TopMost = true };
-            teacherregistrationformpv.FormBorderStyle = FormBorderStyle.None;
-            paneladminmain.Controls.Add(teacherregistrationformpv);
-            teacherregistrationformpv.Show();
+            loadformpv(new TeacherRegistrationForm());
 
             Panelnav.Height = Teacherdashbtn.Height;
             Panelnav.Top = Teacherdashbtn.Top;
@@ -162,6 +150,22 @@ namespace FinalYearProject
         private void Recorddashbtn_Leave(object sender, EventArgs e)
         {
             Recorddashbtn.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+
+        public void loadformpv (object Form)
+        {
+            if (this.paneladminmain.Controls.Count > 0)
+                this.paneladminmain.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.paneladminmain.Controls.Add(f);
+            this.paneladminmain.Tag = f;
+            f.Show();
+           
+
+           
         }
     }
 }

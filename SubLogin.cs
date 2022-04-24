@@ -64,7 +64,7 @@ namespace FinalYearProject
 
         private void Closewindowbt_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }
