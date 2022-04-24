@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FinalYearProject
 {
-    public partial class Studentform : Form
+    public partial class Adminform : Form
     {
-        public Studentform()
+        public Adminform()
         {
             InitializeComponent();
+        }
+
+        private void StudentFormlb_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void StudentFormlo_Click(object sender, EventArgs e)
@@ -24,7 +29,7 @@ namespace FinalYearProject
             this.Hide();
         }
 
-        private void CloseWindowbt2_Click(object sender, EventArgs e)
+        private void closebt_Click(object sender, EventArgs e)
         {
             this.Close();
         }

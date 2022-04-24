@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace FinalYearProject
 {
-    public partial class Studentform : Form
+    public partial class Teacherform : Form
     {
-        public Studentform()
+        public Teacherform()
         {
             InitializeComponent();
         }
 
-        private void StudentFormlo_Click(object sender, EventArgs e)
+        private void closebt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TeacherFormlo_Click(object sender, EventArgs e)
         {
             SubLogin subLoginlo = new SubLogin();
             subLoginlo.Show();
             this.Hide();
-        }
-
-        private void CloseWindowbt2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

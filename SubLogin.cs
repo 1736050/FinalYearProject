@@ -27,7 +27,7 @@ namespace FinalYearProject
 
         }
 
-        private void SubLoginbt_Click(object sender, EventArgs e)
+        private void SubLoginbt_Click(object sender, EventArgs e) // by clicking this button I can navigate to Student, Teacher and Admin Form
         {
             if (SubUsertypeCb.Text == "Student")
             {
@@ -38,17 +38,21 @@ namespace FinalYearProject
 
             else if (SubUsertypeCb.Text == "Teacher")
             {
-
+                Teacherform teacherformop = new Teacherform();
+                teacherformop.Show();
+                this.Hide();
             }
 
             if (SubUsertypeCb.Text == "Admin")
             {
-
+                Adminform adminformop = new Adminform();
+                adminformop.Show();
+                this.Hide();
             }
         }
         private void Closewindowbt_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
     }
