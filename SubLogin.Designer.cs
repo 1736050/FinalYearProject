@@ -172,7 +172,7 @@ namespace FinalYearProject
         #endregion
 
 
-        private System.Windows.Forms.Label label1;
+        
         private System.Windows.Forms.Label DeveloperName;
         private System.Windows.Forms.Label SubUserTypelb;
         private System.Windows.Forms.ComboBox SubUsertypeCb;

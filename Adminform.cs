@@ -27,9 +27,10 @@ namespace FinalYearProject
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25, 25));
-            
-           
+
+
             // when form open the panel nav will highlight the side of dash button
+            loadformpv(new StudentRegistrationForm());
             Panelnav.Height = Studentdashbtn.Height;
             Panelnav.Top = Studentdashbtn.Top;
             Panelnav.Left = Studentdashbtn.Left;
@@ -102,18 +103,21 @@ namespace FinalYearProject
 
         private void Attendencedashbtn_Click(object sender, EventArgs e)
         {
+            loadformpv(new AttendenceForm());
             Panelnav.Height = Attendencedashbtn.Height;
             Panelnav.Top = Attendencedashbtn.Top;
             Panelnav.Left = Attendencedashbtn.Left;
             Attendencedashbtn.BackColor = Color.FromArgb(46, 51, 73);
         }
 
-        private void Recorddashbtn_Click(object sender, EventArgs e)
+        private void Misdashbtn_Click_1(object sender, EventArgs e)
         {
-            Panelnav.Height = Recorddashbtn.Height;
-            Panelnav.Top = Recorddashbtn.Top;
-            Panelnav.Left = Recorddashbtn.Left;
-            Recorddashbtn.BackColor = Color.FromArgb(46, 51, 73);
+            loadformpv(new MisForm());
+
+            Panelnav.Height = Misdashbtn.Height;
+            Panelnav.Top = Misdashbtn.Top;
+            Panelnav.Left = Misdashbtn.Left;
+            Misdashbtn.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void Studentdashbtn_Leave(object sender, EventArgs e)
@@ -147,9 +151,9 @@ namespace FinalYearProject
             Attendencedashbtn.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void Recorddashbtn_Leave(object sender, EventArgs e)
+        private void Misdashbtn_Leave(object sender, EventArgs e)
         {
-            Recorddashbtn.BackColor = Color.FromArgb(24, 30, 54);
+            Misdashbtn.BackColor = Color.FromArgb(24, 30, 54);
         }
 
 
@@ -157,15 +161,14 @@ namespace FinalYearProject
         {
             if (this.paneladminmain.Controls.Count > 0)
                 this.paneladminmain.Controls.RemoveAt(0);
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.paneladminmain.Controls.Add(f);
-            this.paneladminmain.Tag = f;
-            f.Show();
-           
-
-           
+            Form forminpv = Form as Form;
+            forminpv.TopLevel = false;
+            forminpv.Dock = DockStyle.Fill;
+            this.paneladminmain.Controls.Add(forminpv);
+            this.paneladminmain.Tag = forminpv;
+            forminpv.Show(); 
         }
+
+        
     }
 }

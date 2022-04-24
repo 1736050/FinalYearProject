@@ -14,7 +14,7 @@ namespace FinalYearProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SubLogin()); // change SubLogin to LoginForm to start the application to test or use login verification functionality.
+            Application.Run(new Adminform()); // change SubLogin to LoginForm to start the application to test or use login verification functionality.
         }
     }
 }

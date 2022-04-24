@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalYearProject
 {
-    public partial class StudentRegistrationForm : Form
+    public partial class AttendenceForm : Form
     {
-        public StudentRegistrationForm()
+        public AttendenceForm()
         {
             InitializeComponent();
-        }
-
-        private void StudentRegistrationForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
