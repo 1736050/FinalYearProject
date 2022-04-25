@@ -256,7 +256,7 @@
             this.Stsearchbtn.TabIndex = 28;
             this.Stsearchbtn.Text = "Search";
             this.Stsearchbtn.UseVisualStyleBackColor = true;
-            this.Stsearchbtn.Click += new System.EventHandler(this.button4_Click);
+            this.Stsearchbtn.Click += new System.EventHandler(this.Stsearchbtn_Click);
             // 
             // button5
             // 

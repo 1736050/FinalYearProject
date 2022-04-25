@@ -24,30 +24,8 @@ namespace FinalYearProject
         {
 
         }
-        int Key = 0;
-        private void StDGV_cellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Fntxt.Text = StDGV.SelectedRows[0].Cells[1].Value.ToString();
-            Sntxt.Text = StDGV.SelectedRows[0].Cells[2].Value.ToString();
-            Dbtxt.Text = StDGV.SelectedRows[0].Cells[3].Value.ToString();
-            Gntxt.Text = StDGV.SelectedRows[0].Cells[4].Value.ToString();
-            Cotxt.Text = StDGV.SelectedRows[0].Cells[5].Value.ToString();
-            Pntxt.Text = StDGV.SelectedRows[0].Cells[6].Value.ToString();
-            Adtxt.Text = StDGV.SelectedRows[0].Cells[7].Value.ToString();
-
-            if (Fntxt.Text == "")
-            {
-                Key = 0;
-            }
-            else
-            {
-                Key = Convert.ToInt32(StDGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+        
         private void ShowSR()
         {
             Con.Open();
@@ -61,6 +39,7 @@ namespace FinalYearProject
         }
         private void Reset()
         {
+            Sitxt.Text = "";
             Fntxt.Text = "";
             Sntxt.Text = "";
             Dbtxt.Text = "";
@@ -107,12 +86,28 @@ namespace FinalYearProject
         
         private void Stremovebtn_Click(object sender, EventArgs e)
         {
-
+            Con.Open();
+           SqlCommand cmd = Con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete from StudentRegistrationTable where Firstname='" + Fntxt.Text + "'";
+            cmd.ExecuteNonQuery();
+            Con.Close();
+            ShowSR();
+            MessageBox.Show("Record deleted Successfully");
+            Reset();
         }
 
         private void Stupdatebtn_Click(object sender, EventArgs e)
         {
-
+            Con.Open();
+            SqlCommand cmd = Con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update StudentRegistrationTable set where Firstname='" + Fntxt.Text + "'";
+            cmd.ExecuteNonQuery();
+            Con.Close();
+            ShowSR();
+            MessageBox.Show("Record deleted Successfully");
+            Reset();
         }
 
         private void StDGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -126,6 +121,11 @@ namespace FinalYearProject
             Cotxt.Text = StDGV.Rows[e.RowIndex].Cells["Course"].Value.ToString();
             Pntxt.Text = StDGV.Rows[e.RowIndex].Cells["Phonenumber"].Value.ToString();
             Adtxt.Text = StDGV.Rows[e.RowIndex].Cells["Address"].Value.ToString();
+        }
+
+        private void Stsearchbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
