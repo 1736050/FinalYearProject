@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.Stidlb = new System.Windows.Forms.Label();
-            this.Stidtxt = new System.Windows.Forms.TextBox();
-            this.Stfntxt = new System.Windows.Forms.TextBox();
+            this.Idtxt = new System.Windows.Forms.TextBox();
+            this.Fntxt = new System.Windows.Forms.TextBox();
             this.Stfnlb = new System.Windows.Forms.Label();
-            this.Stsntxt = new System.Windows.Forms.TextBox();
+            this.Sntxt = new System.Windows.Forms.TextBox();
             this.Stsnlb = new System.Windows.Forms.Label();
             this.Stdblb = new System.Windows.Forms.Label();
             this.Stglb = new System.Windows.Forms.Label();
             this.Stclb = new System.Windows.Forms.Label();
             this.stimlb = new System.Windows.Forms.Label();
-            this.Stadtxt = new System.Windows.Forms.TextBox();
+            this.Adtxt = new System.Windows.Forms.TextBox();
             this.stadlb = new System.Windows.Forms.Label();
-            this.Stpntxt = new System.Windows.Forms.TextBox();
+            this.Pntxt = new System.Windows.Forms.TextBox();
             this.stpnlb = new System.Windows.Forms.Label();
-            this.Stgcob = new System.Windows.Forms.ComboBox();
-            this.Stcoursecob = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Stimagebox = new System.Windows.Forms.PictureBox();
+            this.Gntxt = new System.Windows.Forms.ComboBox();
+            this.Cotxt = new System.Windows.Forms.ComboBox();
+            this.Dbtxt = new System.Windows.Forms.DateTimePicker();
+            this.Imbox = new System.Windows.Forms.PictureBox();
             this.StdataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Stupdatebtn = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.Stremovebtn = new System.Windows.Forms.Button();
             this.Stsearchbtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Stimagebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StdataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,19 +67,20 @@
             this.Stidlb.TabIndex = 0;
             this.Stidlb.Text = "Student ID:";
             // 
-            // Stidtxt
+            // Idtxt
             // 
-            this.Stidtxt.Location = new System.Drawing.Point(119, 32);
-            this.Stidtxt.Name = "Stidtxt";
-            this.Stidtxt.Size = new System.Drawing.Size(120, 20);
-            this.Stidtxt.TabIndex = 1;
+            this.Idtxt.Location = new System.Drawing.Point(119, 32);
+            this.Idtxt.Name = "Idtxt";
+            this.Idtxt.Size = new System.Drawing.Size(120, 20);
+            this.Idtxt.TabIndex = 1;
+            this.Idtxt.Visible = false;
             // 
-            // Stfntxt
+            // Fntxt
             // 
-            this.Stfntxt.Location = new System.Drawing.Point(119, 69);
-            this.Stfntxt.Name = "Stfntxt";
-            this.Stfntxt.Size = new System.Drawing.Size(120, 20);
-            this.Stfntxt.TabIndex = 3;
+            this.Fntxt.Location = new System.Drawing.Point(119, 69);
+            this.Fntxt.Name = "Fntxt";
+            this.Fntxt.Size = new System.Drawing.Size(120, 20);
+            this.Fntxt.TabIndex = 3;
             // 
             // Stfnlb
             // 
@@ -91,12 +92,12 @@
             this.Stfnlb.TabIndex = 2;
             this.Stfnlb.Text = "First Name:";
             // 
-            // Stsntxt
+            // Sntxt
             // 
-            this.Stsntxt.Location = new System.Drawing.Point(119, 107);
-            this.Stsntxt.Name = "Stsntxt";
-            this.Stsntxt.Size = new System.Drawing.Size(120, 20);
-            this.Stsntxt.TabIndex = 5;
+            this.Sntxt.Location = new System.Drawing.Point(119, 107);
+            this.Sntxt.Name = "Sntxt";
+            this.Sntxt.Size = new System.Drawing.Size(120, 20);
+            this.Sntxt.TabIndex = 5;
             // 
             // Stsnlb
             // 
@@ -148,13 +149,13 @@
             this.stimlb.TabIndex = 16;
             this.stimlb.Text = "Image:";
             // 
-            // Stadtxt
+            // Adtxt
             // 
-            this.Stadtxt.Location = new System.Drawing.Point(119, 301);
-            this.Stadtxt.Multiline = true;
-            this.Stadtxt.Name = "Stadtxt";
-            this.Stadtxt.Size = new System.Drawing.Size(120, 71);
-            this.Stadtxt.TabIndex = 15;
+            this.Adtxt.Location = new System.Drawing.Point(119, 301);
+            this.Adtxt.Multiline = true;
+            this.Adtxt.Name = "Adtxt";
+            this.Adtxt.Size = new System.Drawing.Size(120, 71);
+            this.Adtxt.TabIndex = 15;
             // 
             // stadlb
             // 
@@ -166,12 +167,12 @@
             this.stadlb.TabIndex = 14;
             this.stadlb.Text = "Address:";
             // 
-            // Stpntxt
+            // Pntxt
             // 
-            this.Stpntxt.Location = new System.Drawing.Point(119, 262);
-            this.Stpntxt.Name = "Stpntxt";
-            this.Stpntxt.Size = new System.Drawing.Size(120, 20);
-            this.Stpntxt.TabIndex = 13;
+            this.Pntxt.Location = new System.Drawing.Point(119, 262);
+            this.Pntxt.Name = "Pntxt";
+            this.Pntxt.Size = new System.Drawing.Size(120, 20);
+            this.Pntxt.TabIndex = 13;
             // 
             // stpnlb
             // 
@@ -183,43 +184,43 @@
             this.stpnlb.TabIndex = 12;
             this.stpnlb.Text = "Phone Number:";
             // 
-            // Stgcob
+            // Gntxt
             // 
-            this.Stgcob.FormattingEnabled = true;
-            this.Stgcob.Items.AddRange(new object[] {
+            this.Gntxt.FormattingEnabled = true;
+            this.Gntxt.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Nobinary",
             "Others"});
-            this.Stgcob.Location = new System.Drawing.Point(119, 188);
-            this.Stgcob.Name = "Stgcob";
-            this.Stgcob.Size = new System.Drawing.Size(121, 21);
-            this.Stgcob.TabIndex = 20;
+            this.Gntxt.Location = new System.Drawing.Point(119, 188);
+            this.Gntxt.Name = "Gntxt";
+            this.Gntxt.Size = new System.Drawing.Size(121, 21);
+            this.Gntxt.TabIndex = 20;
             // 
-            // Stcoursecob
+            // Cotxt
             // 
-            this.Stcoursecob.FormattingEnabled = true;
-            this.Stcoursecob.Location = new System.Drawing.Point(119, 224);
-            this.Stcoursecob.Name = "Stcoursecob";
-            this.Stcoursecob.Size = new System.Drawing.Size(121, 21);
-            this.Stcoursecob.TabIndex = 21;
+            this.Cotxt.FormattingEnabled = true;
+            this.Cotxt.Location = new System.Drawing.Point(119, 224);
+            this.Cotxt.Name = "Cotxt";
+            this.Cotxt.Size = new System.Drawing.Size(121, 21);
+            this.Cotxt.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // Dbtxt
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(119, 149);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 18);
-            this.dateTimePicker1.TabIndex = 22;
+            this.Dbtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dbtxt.Location = new System.Drawing.Point(119, 149);
+            this.Dbtxt.Name = "Dbtxt";
+            this.Dbtxt.Size = new System.Drawing.Size(121, 18);
+            this.Dbtxt.TabIndex = 22;
             // 
-            // Stimagebox
+            // Imbox
             // 
-            this.Stimagebox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Stimagebox.Location = new System.Drawing.Point(367, 35);
-            this.Stimagebox.Name = "Stimagebox";
-            this.Stimagebox.Size = new System.Drawing.Size(162, 149);
-            this.Stimagebox.TabIndex = 23;
-            this.Stimagebox.TabStop = false;
+            this.Imbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Imbox.Location = new System.Drawing.Point(367, 35);
+            this.Imbox.Name = "Imbox";
+            this.Imbox.Size = new System.Drawing.Size(162, 149);
+            this.Imbox.TabIndex = 23;
+            this.Imbox.TabStop = false;
             // 
             // StdataGridView1
             // 
@@ -238,6 +239,7 @@
             this.Stupdatebtn.TabIndex = 25;
             this.Stupdatebtn.Text = "Update";
             this.Stupdatebtn.UseVisualStyleBackColor = true;
+            this.Stupdatebtn.Click += new System.EventHandler(this.Stupdatebtn_Click);
             // 
             // StAddbtn
             // 
@@ -247,6 +249,7 @@
             this.StAddbtn.TabIndex = 26;
             this.StAddbtn.Text = "Add";
             this.StAddbtn.UseVisualStyleBackColor = true;
+            this.StAddbtn.Click += new System.EventHandler(this.StAddbtn_Click);
             // 
             // Stremovebtn
             // 
@@ -256,6 +259,7 @@
             this.Stremovebtn.TabIndex = 27;
             this.Stremovebtn.Text = "Remove";
             this.Stremovebtn.UseVisualStyleBackColor = true;
+            this.Stremovebtn.Click += new System.EventHandler(this.Stremovebtn_Click);
             // 
             // Stsearchbtn
             // 
@@ -288,30 +292,30 @@
             this.Controls.Add(this.StAddbtn);
             this.Controls.Add(this.Stupdatebtn);
             this.Controls.Add(this.StdataGridView1);
-            this.Controls.Add(this.Stimagebox);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.Stcoursecob);
-            this.Controls.Add(this.Stgcob);
+            this.Controls.Add(this.Imbox);
+            this.Controls.Add(this.Dbtxt);
+            this.Controls.Add(this.Cotxt);
+            this.Controls.Add(this.Gntxt);
             this.Controls.Add(this.stimlb);
-            this.Controls.Add(this.Stadtxt);
+            this.Controls.Add(this.Adtxt);
             this.Controls.Add(this.stadlb);
-            this.Controls.Add(this.Stpntxt);
+            this.Controls.Add(this.Pntxt);
             this.Controls.Add(this.stpnlb);
             this.Controls.Add(this.Stclb);
             this.Controls.Add(this.Stglb);
             this.Controls.Add(this.Stdblb);
-            this.Controls.Add(this.Stsntxt);
+            this.Controls.Add(this.Sntxt);
             this.Controls.Add(this.Stsnlb);
-            this.Controls.Add(this.Stfntxt);
+            this.Controls.Add(this.Fntxt);
             this.Controls.Add(this.Stfnlb);
-            this.Controls.Add(this.Stidtxt);
+            this.Controls.Add(this.Idtxt);
             this.Controls.Add(this.Stidlb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentRegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Studentregistrationform";
             this.Load += new System.EventHandler(this.StudentRegistrationForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Stimagebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StdataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,23 +325,23 @@
         #endregion
 
         private System.Windows.Forms.Label Stidlb;
-        private System.Windows.Forms.TextBox Stidtxt;
-        private System.Windows.Forms.TextBox Stfntxt;
+        private System.Windows.Forms.TextBox Idtxt;
+        private System.Windows.Forms.TextBox Fntxt;
         private System.Windows.Forms.Label Stfnlb;
-        private System.Windows.Forms.TextBox Stsntxt;
+        private System.Windows.Forms.TextBox Sntxt;
         private System.Windows.Forms.Label Stsnlb;
         private System.Windows.Forms.Label Stdblb;
         private System.Windows.Forms.Label Stglb;
         private System.Windows.Forms.Label Stclb;
         private System.Windows.Forms.Label stimlb;
-        private System.Windows.Forms.TextBox Stadtxt;
+        private System.Windows.Forms.TextBox Adtxt;
         private System.Windows.Forms.Label stadlb;
-        private System.Windows.Forms.TextBox Stpntxt;
+        private System.Windows.Forms.TextBox Pntxt;
         private System.Windows.Forms.Label stpnlb;
-        private System.Windows.Forms.ComboBox Stgcob;
-        private System.Windows.Forms.ComboBox Stcoursecob;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.PictureBox Stimagebox;
+        private System.Windows.Forms.ComboBox Gntxt;
+        private System.Windows.Forms.ComboBox Cotxt;
+        private System.Windows.Forms.DateTimePicker Dbtxt;
+        private System.Windows.Forms.PictureBox Imbox;
         private System.Windows.Forms.DataGridView StdataGridView1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button Stupdatebtn;
