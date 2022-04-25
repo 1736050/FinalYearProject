@@ -37,8 +37,6 @@
             this.Stdblb = new System.Windows.Forms.Label();
             this.Stglb = new System.Windows.Forms.Label();
             this.Stclb = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.stimlb = new System.Windows.Forms.Label();
             this.Stadtxt = new System.Windows.Forms.TextBox();
             this.stadlb = new System.Windows.Forms.Label();
@@ -49,6 +47,12 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Stimagebox = new System.Windows.Forms.PictureBox();
             this.StdataGridView1 = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Stupdatebtn = new System.Windows.Forms.Button();
+            this.StAddbtn = new System.Windows.Forms.Button();
+            this.Stremovebtn = new System.Windows.Forms.Button();
+            this.Stsearchbtn = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Stimagebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StdataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -133,23 +137,6 @@
             this.Stclb.Size = new System.Drawing.Size(43, 13);
             this.Stclb.TabIndex = 10;
             this.Stclb.Text = "Course:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(119, 393);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(120, 20);
-            this.textBox6.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label6.Location = new System.Drawing.Point(34, 396);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Password:";
             // 
             // stimlb
             // 
@@ -236,11 +223,58 @@
             // 
             // StdataGridView1
             // 
+            this.StdataGridView1.AllowUserToOrderColumns = true;
             this.StdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StdataGridView1.Location = new System.Drawing.Point(294, 200);
             this.StdataGridView1.Name = "StdataGridView1";
             this.StdataGridView1.Size = new System.Drawing.Size(459, 250);
             this.StdataGridView1.TabIndex = 24;
+            // 
+            // Stupdatebtn
+            // 
+            this.Stupdatebtn.Location = new System.Drawing.Point(37, 472);
+            this.Stupdatebtn.Name = "Stupdatebtn";
+            this.Stupdatebtn.Size = new System.Drawing.Size(75, 23);
+            this.Stupdatebtn.TabIndex = 25;
+            this.Stupdatebtn.Text = "Update";
+            this.Stupdatebtn.UseVisualStyleBackColor = true;
+            // 
+            // StAddbtn
+            // 
+            this.StAddbtn.Location = new System.Drawing.Point(37, 427);
+            this.StAddbtn.Name = "StAddbtn";
+            this.StAddbtn.Size = new System.Drawing.Size(75, 23);
+            this.StAddbtn.TabIndex = 26;
+            this.StAddbtn.Text = "Add";
+            this.StAddbtn.UseVisualStyleBackColor = true;
+            // 
+            // Stremovebtn
+            // 
+            this.Stremovebtn.Location = new System.Drawing.Point(142, 472);
+            this.Stremovebtn.Name = "Stremovebtn";
+            this.Stremovebtn.Size = new System.Drawing.Size(75, 23);
+            this.Stremovebtn.TabIndex = 27;
+            this.Stremovebtn.Text = "Remove";
+            this.Stremovebtn.UseVisualStyleBackColor = true;
+            // 
+            // Stsearchbtn
+            // 
+            this.Stsearchbtn.Location = new System.Drawing.Point(142, 427);
+            this.Stsearchbtn.Name = "Stsearchbtn";
+            this.Stsearchbtn.Size = new System.Drawing.Size(75, 23);
+            this.Stsearchbtn.TabIndex = 28;
+            this.Stsearchbtn.Text = "Search";
+            this.Stsearchbtn.UseVisualStyleBackColor = true;
+            this.Stsearchbtn.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(545, 161);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Browse";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // StudentRegistrationForm
             // 
@@ -248,13 +282,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.Stsearchbtn);
+            this.Controls.Add(this.Stremovebtn);
+            this.Controls.Add(this.StAddbtn);
+            this.Controls.Add(this.Stupdatebtn);
             this.Controls.Add(this.StdataGridView1);
             this.Controls.Add(this.Stimagebox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Stcoursecob);
             this.Controls.Add(this.Stgcob);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.stimlb);
             this.Controls.Add(this.Stadtxt);
             this.Controls.Add(this.stadlb);
@@ -292,8 +329,6 @@
         private System.Windows.Forms.Label Stdblb;
         private System.Windows.Forms.Label Stglb;
         private System.Windows.Forms.Label Stclb;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label stimlb;
         private System.Windows.Forms.TextBox Stadtxt;
         private System.Windows.Forms.Label stadlb;
@@ -304,5 +339,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox Stimagebox;
         private System.Windows.Forms.DataGridView StdataGridView1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button Stupdatebtn;
+        private System.Windows.Forms.Button StAddbtn;
+        private System.Windows.Forms.Button Stremovebtn;
+        private System.Windows.Forms.Button Stsearchbtn;
+        private System.Windows.Forms.Button button5;
     }
 }
