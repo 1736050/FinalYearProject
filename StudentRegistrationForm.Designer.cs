@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Stidlb = new System.Windows.Forms.Label();
-            this.Idtxt = new System.Windows.Forms.TextBox();
             this.Fntxt = new System.Windows.Forms.TextBox();
             this.Stfnlb = new System.Windows.Forms.Label();
             this.Sntxt = new System.Windows.Forms.TextBox();
@@ -46,34 +44,18 @@
             this.Cotxt = new System.Windows.Forms.ComboBox();
             this.Dbtxt = new System.Windows.Forms.DateTimePicker();
             this.Imbox = new System.Windows.Forms.PictureBox();
-            this.StdataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StDGV = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Stupdatebtn = new System.Windows.Forms.Button();
             this.StAddbtn = new System.Windows.Forms.Button();
             this.Stremovebtn = new System.Windows.Forms.Button();
             this.Stsearchbtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.Sitxt = new System.Windows.Forms.TextBox();
+            this.Silb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StdataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Stidlb
-            // 
-            this.Stidlb.AutoSize = true;
-            this.Stidlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Stidlb.Location = new System.Drawing.Point(34, 35);
-            this.Stidlb.Name = "Stidlb";
-            this.Stidlb.Size = new System.Drawing.Size(61, 13);
-            this.Stidlb.TabIndex = 0;
-            this.Stidlb.Text = "Student ID:";
-            // 
-            // Idtxt
-            // 
-            this.Idtxt.Location = new System.Drawing.Point(119, 32);
-            this.Idtxt.Name = "Idtxt";
-            this.Idtxt.Size = new System.Drawing.Size(120, 20);
-            this.Idtxt.TabIndex = 1;
-            this.Idtxt.Visible = false;
             // 
             // Fntxt
             // 
@@ -222,14 +204,19 @@
             this.Imbox.TabIndex = 23;
             this.Imbox.TabStop = false;
             // 
-            // StdataGridView1
+            // StDGV
             // 
-            this.StdataGridView1.AllowUserToOrderColumns = true;
-            this.StdataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StdataGridView1.Location = new System.Drawing.Point(294, 200);
-            this.StdataGridView1.Name = "StdataGridView1";
-            this.StdataGridView1.Size = new System.Drawing.Size(459, 250);
-            this.StdataGridView1.TabIndex = 24;
+            this.StDGV.AllowUserToAddRows = false;
+            this.StDGV.AllowUserToDeleteRows = false;
+            this.StDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StDGV.GridColor = System.Drawing.SystemColors.Control;
+            this.StDGV.Location = new System.Drawing.Point(294, 200);
+            this.StDGV.Name = "StDGV";
+            this.StDGV.ReadOnly = true;
+            this.StDGV.RowHeadersWidth = 20;
+            this.StDGV.Size = new System.Drawing.Size(459, 250);
+            this.StDGV.TabIndex = 15;
+            this.StDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StDGV_CellClick);
             // 
             // Stupdatebtn
             // 
@@ -280,18 +267,38 @@
             this.button5.Text = "Browse";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // Sitxt
+            // 
+            this.Sitxt.Enabled = false;
+            this.Sitxt.Location = new System.Drawing.Point(120, 32);
+            this.Sitxt.Name = "Sitxt";
+            this.Sitxt.Size = new System.Drawing.Size(120, 20);
+            this.Sitxt.TabIndex = 31;
+            // 
+            // Silb
+            // 
+            this.Silb.AutoSize = true;
+            this.Silb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.Silb.Location = new System.Drawing.Point(35, 35);
+            this.Silb.Name = "Silb";
+            this.Silb.Size = new System.Drawing.Size(61, 13);
+            this.Silb.TabIndex = 30;
+            this.Silb.Text = "Student ID:";
+            // 
             // StudentRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.Sitxt);
+            this.Controls.Add(this.Silb);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.Stsearchbtn);
             this.Controls.Add(this.Stremovebtn);
             this.Controls.Add(this.StAddbtn);
             this.Controls.Add(this.Stupdatebtn);
-            this.Controls.Add(this.StdataGridView1);
+            this.Controls.Add(this.StDGV);
             this.Controls.Add(this.Imbox);
             this.Controls.Add(this.Dbtxt);
             this.Controls.Add(this.Cotxt);
@@ -308,24 +315,19 @@
             this.Controls.Add(this.Stsnlb);
             this.Controls.Add(this.Fntxt);
             this.Controls.Add(this.Stfnlb);
-            this.Controls.Add(this.Idtxt);
-            this.Controls.Add(this.Stidlb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentRegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Studentregistrationform";
             this.Load += new System.EventHandler(this.StudentRegistrationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Imbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StdataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Stidlb;
-        private System.Windows.Forms.TextBox Idtxt;
         private System.Windows.Forms.TextBox Fntxt;
         private System.Windows.Forms.Label Stfnlb;
         private System.Windows.Forms.TextBox Sntxt;
@@ -342,12 +344,14 @@
         private System.Windows.Forms.ComboBox Cotxt;
         private System.Windows.Forms.DateTimePicker Dbtxt;
         private System.Windows.Forms.PictureBox Imbox;
-        private System.Windows.Forms.DataGridView StdataGridView1;
+        private System.Windows.Forms.DataGridView StDGV;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button Stupdatebtn;
         private System.Windows.Forms.Button StAddbtn;
         private System.Windows.Forms.Button Stremovebtn;
         private System.Windows.Forms.Button Stsearchbtn;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox Sitxt;
+        private System.Windows.Forms.Label Silb;
     }
 }

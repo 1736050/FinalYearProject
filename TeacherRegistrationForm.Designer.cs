@@ -47,8 +47,6 @@
             this.Tesnlb = new System.Windows.Forms.Label();
             this.Tefntxt = new System.Windows.Forms.TextBox();
             this.Tefnlb = new System.Windows.Forms.Label();
-            this.Teidtxt = new System.Windows.Forms.TextBox();
-            this.Teidlb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StdataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Teimagebox)).BeginInit();
             this.SuspendLayout();
@@ -225,23 +223,6 @@
             this.Tefnlb.TabIndex = 27;
             this.Tefnlb.Text = "First Name:";
             // 
-            // Teidtxt
-            // 
-            this.Teidtxt.Location = new System.Drawing.Point(109, 34);
-            this.Teidtxt.Name = "Teidtxt";
-            this.Teidtxt.Size = new System.Drawing.Size(120, 20);
-            this.Teidtxt.TabIndex = 26;
-            // 
-            // Teidlb
-            // 
-            this.Teidlb.AutoSize = true;
-            this.Teidlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Teidlb.Location = new System.Drawing.Point(24, 37);
-            this.Teidlb.Name = "Teidlb";
-            this.Teidlb.Size = new System.Drawing.Size(64, 13);
-            this.Teidlb.TabIndex = 25;
-            this.Teidlb.Text = "Teacher ID:";
-            // 
             // TeacherRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,8 +248,6 @@
             this.Controls.Add(this.Tesnlb);
             this.Controls.Add(this.Tefntxt);
             this.Controls.Add(this.Tefnlb);
-            this.Controls.Add(this.Teidtxt);
-            this.Controls.Add(this.Teidlb);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherRegistrationForm";
@@ -302,7 +281,5 @@
         private System.Windows.Forms.Label Tesnlb;
         private System.Windows.Forms.TextBox Tefntxt;
         private System.Windows.Forms.Label Tefnlb;
-        private System.Windows.Forms.TextBox Teidtxt;
-        private System.Windows.Forms.Label Teidlb;
     }
 }
