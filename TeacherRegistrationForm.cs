@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace FinalYearProject
 {
@@ -108,10 +109,14 @@ namespace FinalYearProject
             }
             else
             {
+                byte[] Imbox = null;
+                FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Streem);
+                Imbox = brs.ReadBytes((int)Streem.Length);
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into TeacherRegistrationTable(Firstname,Surname,Dob,Gender,CourseId,Course,Modulename,Phonenumber,Address)Values(@DF,@DS,@DB,@DG,@DI,@DC,@DN,@DP,@DA)", Con);
+                    SqlCommand cmd = new SqlCommand("Insert into TeacherRegistrationTable(Firstname,Surname,Dob,Gender,CourseId,Course,Modulename,Phonenumber,Address,Image)Values(@DF,@DS,@DB,@DG,@DI,@DC,@DN,@DP,@DA,@images)", Con);
                     cmd.Parameters.AddWithValue("@DF", Fntxt.Text);
                     cmd.Parameters.AddWithValue("@DS", Sntxt.Text);
                     cmd.Parameters.AddWithValue("@DB", Dbtxt.Text);
@@ -121,7 +126,7 @@ namespace FinalYearProject
                     cmd.Parameters.AddWithValue("@DN", Mdtxt.Text);
                     cmd.Parameters.AddWithValue("@DP", Pntxt.Text);
                     cmd.Parameters.AddWithValue("@DA", Adtxt.Text);
-                    // cmd.Parameters.AddWithValue("@DI", Imbox.Image);
+                    cmd.Parameters.Add(new SqlParameter("@images", Imbox));
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Teacher Registered Sucessfully");
                     Con.Close();
@@ -291,6 +296,19 @@ namespace FinalYearProject
 
             Con.Close();
 
+        }
+        string imgLocation = "";
+        private void Imbtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image files (*.jpg, *.jpeg, *jpe, *jfif, *.png, *.bmp) | *.jpg; *.jpeg; *jpe; *jfif; *.png; *.bmp";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                Imbox.ImageLocation = imgLocation;
+            }
+
+        
         }
     }
 }

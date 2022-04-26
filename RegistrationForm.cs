@@ -16,7 +16,7 @@ namespace FinalYearProject
         public RegistrationForm()
         {
             InitializeComponent();
-            ShowSR();
+            
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mhamz\Documents\FinalYearProjectdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void Reset()

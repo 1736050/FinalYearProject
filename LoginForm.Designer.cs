@@ -38,7 +38,7 @@
             this.Pstxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SubLoginbt = new System.Windows.Forms.Button();
+            this.Loginbt = new System.Windows.Forms.Button();
             this.Uttxt = new System.Windows.Forms.ComboBox();
             this.SubUserTypelb = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
@@ -160,16 +160,16 @@
             this.label1.TabIndex = 68;
             this.label1.Text = "Password";
             // 
-            // SubLoginbt
+            // Loginbt
             // 
-            this.SubLoginbt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SubLoginbt.Location = new System.Drawing.Point(240, 306);
-            this.SubLoginbt.Name = "SubLoginbt";
-            this.SubLoginbt.Size = new System.Drawing.Size(75, 23);
-            this.SubLoginbt.TabIndex = 67;
-            this.SubLoginbt.Text = "Login";
-            this.SubLoginbt.UseVisualStyleBackColor = true;
-            this.SubLoginbt.Click += new System.EventHandler(this.SubLoginbt_Click);
+            this.Loginbt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Loginbt.Location = new System.Drawing.Point(240, 306);
+            this.Loginbt.Name = "Loginbt";
+            this.Loginbt.Size = new System.Drawing.Size(75, 23);
+            this.Loginbt.TabIndex = 67;
+            this.Loginbt.Text = "Login";
+            this.Loginbt.UseVisualStyleBackColor = true;
+            this.Loginbt.Click += new System.EventHandler(this.Loginbt_Click);
             // 
             // Uttxt
             // 
@@ -209,7 +209,7 @@
             this.Controls.Add(this.Pstxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SubLoginbt);
+            this.Controls.Add(this.Loginbt);
             this.Controls.Add(this.Uttxt);
             this.Controls.Add(this.SubUserTypelb);
             this.Controls.Add(this.panel3);
@@ -237,7 +237,7 @@
         private System.Windows.Forms.TextBox Pstxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button SubLoginbt;
+        private System.Windows.Forms.Button Loginbt;
         private System.Windows.Forms.ComboBox Uttxt;
         private System.Windows.Forms.Label SubUserTypelb;
     }

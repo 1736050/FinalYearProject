@@ -41,9 +41,7 @@
             this.Pntxt = new System.Windows.Forms.TextBox();
             this.stpnlb = new System.Windows.Forms.Label();
             this.Gntxt = new System.Windows.Forms.ComboBox();
-            this.Cotxt = new System.Windows.Forms.ComboBox();
             this.Dbtxt = new System.Windows.Forms.DateTimePicker();
-            this.Imbox = new System.Windows.Forms.PictureBox();
             this.StDGV = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Stupdatebtn = new System.Windows.Forms.Button();
@@ -55,13 +53,18 @@
             this.Silb = new System.Windows.Forms.Label();
             this.Cbtn = new System.Windows.Forms.Button();
             this.lobnt = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
+            this.Imbox = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Coitxt = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Cotxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
             this.SuspendLayout();
             // 
             // Fntxt
             // 
-            this.Fntxt.Location = new System.Drawing.Point(119, 69);
+            this.Fntxt.Location = new System.Drawing.Point(120, 47);
             this.Fntxt.Name = "Fntxt";
             this.Fntxt.Size = new System.Drawing.Size(120, 20);
             this.Fntxt.TabIndex = 3;
@@ -70,7 +73,7 @@
             // 
             this.Stfnlb.AutoSize = true;
             this.Stfnlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Stfnlb.Location = new System.Drawing.Point(34, 72);
+            this.Stfnlb.Location = new System.Drawing.Point(35, 50);
             this.Stfnlb.Name = "Stfnlb";
             this.Stfnlb.Size = new System.Drawing.Size(60, 13);
             this.Stfnlb.TabIndex = 2;
@@ -78,7 +81,7 @@
             // 
             // Sntxt
             // 
-            this.Sntxt.Location = new System.Drawing.Point(119, 107);
+            this.Sntxt.Location = new System.Drawing.Point(120, 85);
             this.Sntxt.Name = "Sntxt";
             this.Sntxt.Size = new System.Drawing.Size(120, 20);
             this.Sntxt.TabIndex = 5;
@@ -87,7 +90,7 @@
             // 
             this.Stsnlb.AutoSize = true;
             this.Stsnlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Stsnlb.Location = new System.Drawing.Point(34, 110);
+            this.Stsnlb.Location = new System.Drawing.Point(35, 88);
             this.Stsnlb.Name = "Stsnlb";
             this.Stsnlb.Size = new System.Drawing.Size(52, 13);
             this.Stsnlb.TabIndex = 4;
@@ -97,7 +100,7 @@
             // 
             this.Stdblb.AutoSize = true;
             this.Stdblb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Stdblb.Location = new System.Drawing.Point(34, 149);
+            this.Stdblb.Location = new System.Drawing.Point(35, 127);
             this.Stdblb.Name = "Stdblb";
             this.Stdblb.Size = new System.Drawing.Size(69, 13);
             this.Stdblb.TabIndex = 6;
@@ -107,7 +110,7 @@
             // 
             this.Stglb.AutoSize = true;
             this.Stglb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Stglb.Location = new System.Drawing.Point(34, 188);
+            this.Stglb.Location = new System.Drawing.Point(35, 166);
             this.Stglb.Name = "Stglb";
             this.Stglb.Size = new System.Drawing.Size(45, 13);
             this.Stglb.TabIndex = 8;
@@ -117,7 +120,7 @@
             // 
             this.Stclb.AutoSize = true;
             this.Stclb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Stclb.Location = new System.Drawing.Point(34, 227);
+            this.Stclb.Location = new System.Drawing.Point(34, 238);
             this.Stclb.Name = "Stclb";
             this.Stclb.Size = new System.Drawing.Size(43, 13);
             this.Stclb.TabIndex = 10;
@@ -135,7 +138,7 @@
             // 
             // Adtxt
             // 
-            this.Adtxt.Location = new System.Drawing.Point(119, 301);
+            this.Adtxt.Location = new System.Drawing.Point(120, 312);
             this.Adtxt.Multiline = true;
             this.Adtxt.Name = "Adtxt";
             this.Adtxt.Size = new System.Drawing.Size(120, 71);
@@ -145,7 +148,7 @@
             // 
             this.stadlb.AutoSize = true;
             this.stadlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.stadlb.Location = new System.Drawing.Point(34, 304);
+            this.stadlb.Location = new System.Drawing.Point(35, 315);
             this.stadlb.Name = "stadlb";
             this.stadlb.Size = new System.Drawing.Size(48, 13);
             this.stadlb.TabIndex = 14;
@@ -153,7 +156,7 @@
             // 
             // Pntxt
             // 
-            this.Pntxt.Location = new System.Drawing.Point(119, 262);
+            this.Pntxt.Location = new System.Drawing.Point(120, 273);
             this.Pntxt.Name = "Pntxt";
             this.Pntxt.Size = new System.Drawing.Size(120, 20);
             this.Pntxt.TabIndex = 13;
@@ -162,7 +165,7 @@
             // 
             this.stpnlb.AutoSize = true;
             this.stpnlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.stpnlb.Location = new System.Drawing.Point(34, 265);
+            this.stpnlb.Location = new System.Drawing.Point(35, 276);
             this.stpnlb.Name = "stpnlb";
             this.stpnlb.Size = new System.Drawing.Size(81, 13);
             this.stpnlb.TabIndex = 12;
@@ -176,35 +179,18 @@
             "Female",
             "Nobinary",
             "Others"});
-            this.Gntxt.Location = new System.Drawing.Point(119, 188);
+            this.Gntxt.Location = new System.Drawing.Point(120, 166);
             this.Gntxt.Name = "Gntxt";
             this.Gntxt.Size = new System.Drawing.Size(121, 21);
             this.Gntxt.TabIndex = 20;
             // 
-            // Cotxt
-            // 
-            this.Cotxt.FormattingEnabled = true;
-            this.Cotxt.Location = new System.Drawing.Point(119, 224);
-            this.Cotxt.Name = "Cotxt";
-            this.Cotxt.Size = new System.Drawing.Size(121, 21);
-            this.Cotxt.TabIndex = 21;
-            // 
             // Dbtxt
             // 
             this.Dbtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dbtxt.Location = new System.Drawing.Point(119, 149);
+            this.Dbtxt.Location = new System.Drawing.Point(120, 127);
             this.Dbtxt.Name = "Dbtxt";
             this.Dbtxt.Size = new System.Drawing.Size(121, 18);
             this.Dbtxt.TabIndex = 22;
-            // 
-            // Imbox
-            // 
-            this.Imbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Imbox.Location = new System.Drawing.Point(367, 35);
-            this.Imbox.Name = "Imbox";
-            this.Imbox.Size = new System.Drawing.Size(162, 149);
-            this.Imbox.TabIndex = 23;
-            this.Imbox.TabStop = false;
             // 
             // StDGV
             // 
@@ -268,11 +254,12 @@
             this.button5.TabIndex = 29;
             this.button5.Text = "Browse";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Sitxt
             // 
             this.Sitxt.Enabled = false;
-            this.Sitxt.Location = new System.Drawing.Point(120, 32);
+            this.Sitxt.Location = new System.Drawing.Point(121, 10);
             this.Sitxt.Name = "Sitxt";
             this.Sitxt.Size = new System.Drawing.Size(120, 20);
             this.Sitxt.TabIndex = 31;
@@ -281,7 +268,7 @@
             // 
             this.Silb.AutoSize = true;
             this.Silb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Silb.Location = new System.Drawing.Point(35, 35);
+            this.Silb.Location = new System.Drawing.Point(36, 13);
             this.Silb.Name = "Silb";
             this.Silb.Size = new System.Drawing.Size(61, 13);
             this.Silb.TabIndex = 30;
@@ -307,12 +294,55 @@
             this.lobnt.UseVisualStyleBackColor = true;
             this.lobnt.Click += new System.EventHandler(this.lobnt_Click);
             // 
+            // Imbox
+            // 
+            this.Imbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Imbox.Location = new System.Drawing.Point(367, 35);
+            this.Imbox.Name = "Imbox";
+            this.Imbox.Size = new System.Drawing.Size(162, 149);
+            this.Imbox.TabIndex = 23;
+            this.Imbox.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Coitxt
+            // 
+            this.Coitxt.FormattingEnabled = true;
+            this.Coitxt.Location = new System.Drawing.Point(119, 200);
+            this.Coitxt.Name = "Coitxt";
+            this.Coitxt.Size = new System.Drawing.Size(121, 21);
+            this.Coitxt.TabIndex = 35;
+            this.Coitxt.SelectionChangeCommitted += new System.EventHandler(this.Coitxt_SelectionChangeCommitted);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(34, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Course ID:";
+            // 
+            // Cotxt
+            // 
+            this.Cotxt.Enabled = false;
+            this.Cotxt.Location = new System.Drawing.Point(119, 235);
+            this.Cotxt.Name = "Cotxt";
+            this.Cotxt.Size = new System.Drawing.Size(120, 20);
+            this.Cotxt.TabIndex = 36;
+            // 
             // StudentRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.Cotxt);
+            this.Controls.Add(this.Coitxt);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lobnt);
             this.Controls.Add(this.Cbtn);
             this.Controls.Add(this.Sitxt);
@@ -325,7 +355,6 @@
             this.Controls.Add(this.StDGV);
             this.Controls.Add(this.Imbox);
             this.Controls.Add(this.Dbtxt);
-            this.Controls.Add(this.Cotxt);
             this.Controls.Add(this.Gntxt);
             this.Controls.Add(this.stimlb);
             this.Controls.Add(this.Adtxt);
@@ -344,8 +373,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Studentregistrationform";
             this.Load += new System.EventHandler(this.StudentRegistrationForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Imbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,7 +394,6 @@
         private System.Windows.Forms.TextBox Pntxt;
         private System.Windows.Forms.Label stpnlb;
         private System.Windows.Forms.ComboBox Gntxt;
-        private System.Windows.Forms.ComboBox Cotxt;
         private System.Windows.Forms.DateTimePicker Dbtxt;
         private System.Windows.Forms.PictureBox Imbox;
         private System.Windows.Forms.DataGridView StDGV;
@@ -379,5 +407,9 @@
         private System.Windows.Forms.Label Silb;
         private System.Windows.Forms.Button Cbtn;
         private System.Windows.Forms.Button lobnt;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox Coitxt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Cotxt;
     }
 }

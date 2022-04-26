@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 
 namespace FinalYearProject
@@ -18,14 +19,44 @@ namespace FinalYearProject
         {
             InitializeComponent();
             ShowSR();
+            getcourseId();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mhamz\Documents\FinalYearProjectdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void StudentRegistrationForm_Load(object sender, EventArgs e)
         {
 
         }
-        
-        
+        private void getcourseId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select CourseId from CourseTable", Con);
+            SqlDataReader r;
+            r = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(r);
+            //dt.Columns.Add("CourseId", typeof(int));
+            Coitxt.ValueMember = "CourseId";
+            Coitxt.DataSource = dt;
+            Con.Close();
+
+
+        }
+        public void getcoursename()
+        {
+            Con.Open();
+            string Qeruy = "Select * from CourseTable where CourseId=" + Coitxt.SelectedValue.ToString()+ "";
+            SqlCommand cmd = new SqlCommand(Qeruy, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach(DataRow dr in dt.Rows)
+            {
+                Cotxt.Text = dr["Coursename"].ToString();
+
+            }
+            Con.Close();
+        }
+
         private void ShowSR()
         {
             Con.Open();
@@ -47,20 +78,25 @@ namespace FinalYearProject
             Cotxt.Text = "";
             Pntxt.Text = "";
             Adtxt.Text = "";
-         //   Imbox.Image = null;
+         Imbox.Image = null;
+            Coitxt.Text = "";
         }
         private void StAddbtn_Click(object sender, EventArgs e)
         {
-            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" ||  Pntxt.Text == "" || Adtxt.Text == "" || Cotxt.Text == "")
+            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" ||  Pntxt.Text == "" || Adtxt.Text == "" || Cotxt.Text == ""|| Coitxt.Text == "" || Imbox.Image == null)
             {
                 MessageBox.Show("Missing Inforamtion");
             }
             else
             {
+                byte[] Imbox = null;
+                FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Streem);
+                Imbox = brs.ReadBytes((int)Streem.Length);
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into StudentRegistrationTable(Firstname,Surname,Dob,Gender,Course,Phonenumber,Address)Values(@DF,@DS,@DB,@DG,@DC,@DP,@DA)", Con);
+                    SqlCommand cmd = new SqlCommand("Insert into StudentRegistrationTable(Firstname,Surname,Dob,Gender,Course,Phonenumber,Address,Image,CourseId2)Values(@DF,@DS,@DB,@DG,@DC,@DP,@DA,@images,@CI)", Con);
                     cmd.Parameters.AddWithValue("@DF", Fntxt.Text);
                     cmd.Parameters.AddWithValue("@DS", Sntxt.Text);
                     cmd.Parameters.AddWithValue("@DB", Dbtxt.Text);
@@ -68,7 +104,8 @@ namespace FinalYearProject
                    cmd.Parameters.AddWithValue("@DC", Cotxt.Text);
                     cmd.Parameters.AddWithValue("@DP", Pntxt.Text);
                     cmd.Parameters.AddWithValue("@DA", Adtxt.Text);
-                  // cmd.Parameters.AddWithValue("@DI", Imbox.Image);
+                   cmd.Parameters.AddWithValue("@images", Imbox);
+                    cmd.Parameters.AddWithValue("@CI", Coitxt.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Student Registered Sucessfully");
                     Con.Close();
@@ -107,19 +144,24 @@ namespace FinalYearProject
 
         private void Stupdatebtn_Click(object sender, EventArgs e) 
         {
-            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" || Pntxt.Text == "" || Adtxt.Text == ""|| Cotxt.Text == "")
+            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" || Pntxt.Text == "" || Adtxt.Text == ""|| Cotxt.Text == ""|| Coitxt.Text == "")
             {
                 MessageBox.Show("Missing Inforamtion");
             }
             else
             {
+                byte[] Imbox = null;
+                FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Streem);
+                Imbox = brs.ReadBytes((int)Streem.Length);
+
                 try
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
                     Con.Open();
 
                     sda.UpdateCommand = new SqlCommand("update StudentRegistrationTable set Firstname='" + Fntxt.Text + "',Surname= '" + Sntxt.Text + "', Dob='" + Dbtxt.Text + "'," +
-                        " Gender='" + Gntxt.Text + "',Course='" + Cotxt.Text + "',Phonenumber='" + Pntxt.Text + "',Address='" + Pntxt.Text + "' where StudentId='" + Sitxt.Text + "' ", Con);
+                        " Gender='" + Gntxt.Text + "',Course='" + Cotxt.Text + "',Phonenumber='" + Pntxt.Text + "',Address='" + Pntxt.Text + "',CourseId2='" + Coitxt.Text + "'  where StudentId='" + Sitxt.Text + "' ", Con);
                     sda.UpdateCommand.ExecuteNonQuery();
 
                     Con.Close();
@@ -144,8 +186,10 @@ namespace FinalYearProject
             Dbtxt.Text = StDGV.Rows[e.RowIndex].Cells["Dob"].Value.ToString();
             Gntxt.Text = StDGV.Rows[e.RowIndex].Cells["Gender"].Value.ToString();
             Cotxt.Text = StDGV.Rows[e.RowIndex].Cells["Course"].Value.ToString();
+            Coitxt.Text = StDGV.Rows[e.RowIndex].Cells["CourseId2"].Value.ToString();
             Pntxt.Text = StDGV.Rows[e.RowIndex].Cells["Phonenumber"].Value.ToString();
             Adtxt.Text = StDGV.Rows[e.RowIndex].Cells["Address"].Value.ToString();
+            
         }
 
         private void Stsearchbtn_Click(object sender, EventArgs e)
@@ -235,6 +279,17 @@ namespace FinalYearProject
                     da.Fill(dt);
                     StDGV.DataSource = dt;
                 }
+                else if (Coitxt.Text.Length > 0)
+                {
+
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where CourseId='" + Coitxt.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
                 else
                 {
                     MessageBox.Show("No Information is provided to search the records");
@@ -263,6 +318,23 @@ namespace FinalYearProject
             ShowSR();
         }
 
-       
+        string imgLocation = "";
+        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image files (*.jpg, *.jpeg, *jpe, *jfif, *.png, *.bmp) | *.jpg; *.jpeg; *jpe; *jfif; *.png; *.bmp";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                Imbox.ImageLocation = imgLocation;
+            }
+        }
+
+        private void Coitxt_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+            getcoursename();
+        }
     }
 }

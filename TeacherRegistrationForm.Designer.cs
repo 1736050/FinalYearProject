@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.StDGV = new System.Windows.Forms.DataGridView();
-            this.Imbox = new System.Windows.Forms.PictureBox();
             this.Dbtxt = new System.Windows.Forms.DateTimePicker();
             this.Cotxt = new System.Windows.Forms.ComboBox();
             this.Gntxt = new System.Windows.Forms.ComboBox();
@@ -57,6 +56,9 @@
             this.lablemd = new System.Windows.Forms.Label();
             this.Citxt = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Imbox = new System.Windows.Forms.PictureBox();
+            this.Imbtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
             this.SuspendLayout();
@@ -69,15 +71,6 @@
             this.StDGV.Size = new System.Drawing.Size(479, 250);
             this.StDGV.TabIndex = 45;
             this.StDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StDGV_CellClick);
-            // 
-            // Imbox
-            // 
-            this.Imbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Imbox.Location = new System.Drawing.Point(347, 37);
-            this.Imbox.Name = "Imbox";
-            this.Imbox.Size = new System.Drawing.Size(162, 149);
-            this.Imbox.TabIndex = 44;
-            this.Imbox.TabStop = false;
             // 
             // Dbtxt
             // 
@@ -332,12 +325,37 @@
             this.label2.TabIndex = 56;
             this.label2.Text = "Course ID:";
             // 
+            // Imbox
+            // 
+            this.Imbox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Imbox.Location = new System.Drawing.Point(347, 37);
+            this.Imbox.Name = "Imbox";
+            this.Imbox.Size = new System.Drawing.Size(162, 149);
+            this.Imbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imbox.TabIndex = 44;
+            this.Imbox.TabStop = false;
+            // 
+            // Imbtn
+            // 
+            this.Imbtn.Location = new System.Drawing.Point(515, 163);
+            this.Imbtn.Name = "Imbtn";
+            this.Imbtn.Size = new System.Drawing.Size(75, 23);
+            this.Imbtn.TabIndex = 58;
+            this.Imbtn.Text = "Browse";
+            this.Imbtn.UseVisualStyleBackColor = true;
+            this.Imbtn.Click += new System.EventHandler(this.Imbtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // TeacherRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.Imbtn);
             this.Controls.Add(this.Citxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Mdtxt);
@@ -411,5 +429,7 @@
         private System.Windows.Forms.Label lablemd;
         private System.Windows.Forms.ComboBox Citxt;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Imbtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
