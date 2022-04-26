@@ -172,6 +172,11 @@ namespace FinalYearProject
             forminpv.Show(); 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationformop = new RegistrationForm();
+            registrationformop.Show();
+            
+        }
     }
 }

@@ -85,11 +85,23 @@
     <Compile Include="FeeForm.Designer.cs">
       <DependentUpon>FeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MisForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MisForm.Designer.cs">
       <DependentUpon>MisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Studentform.cs">
       <SubType>Form</SubType>
@@ -141,8 +153,14 @@
     <EmbeddedResource Include="FeeForm.resx">
       <DependentUpon>FeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MisForm.resx">
       <DependentUpon>MisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Studentform.resx">
       <DependentUpon>Studentform.cs</DependentUpon>
