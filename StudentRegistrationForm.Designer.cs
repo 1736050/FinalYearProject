@@ -53,6 +53,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.Sitxt = new System.Windows.Forms.TextBox();
             this.Silb = new System.Windows.Forms.Label();
+            this.Cbtn = new System.Windows.Forms.Button();
+            this.lobnt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
             this.SuspendLayout();
@@ -220,7 +222,7 @@
             // 
             // Stupdatebtn
             // 
-            this.Stupdatebtn.Location = new System.Drawing.Point(37, 472);
+            this.Stupdatebtn.Location = new System.Drawing.Point(68, 427);
             this.Stupdatebtn.Name = "Stupdatebtn";
             this.Stupdatebtn.Size = new System.Drawing.Size(75, 23);
             this.Stupdatebtn.TabIndex = 25;
@@ -230,7 +232,7 @@
             // 
             // StAddbtn
             // 
-            this.StAddbtn.Location = new System.Drawing.Point(37, 427);
+            this.StAddbtn.Location = new System.Drawing.Point(165, 389);
             this.StAddbtn.Name = "StAddbtn";
             this.StAddbtn.Size = new System.Drawing.Size(75, 23);
             this.StAddbtn.TabIndex = 26;
@@ -240,7 +242,7 @@
             // 
             // Stremovebtn
             // 
-            this.Stremovebtn.Location = new System.Drawing.Point(142, 472);
+            this.Stremovebtn.Location = new System.Drawing.Point(68, 467);
             this.Stremovebtn.Name = "Stremovebtn";
             this.Stremovebtn.Size = new System.Drawing.Size(75, 23);
             this.Stremovebtn.TabIndex = 27;
@@ -250,7 +252,7 @@
             // 
             // Stsearchbtn
             // 
-            this.Stsearchbtn.Location = new System.Drawing.Point(142, 427);
+            this.Stsearchbtn.Location = new System.Drawing.Point(68, 389);
             this.Stsearchbtn.Name = "Stsearchbtn";
             this.Stsearchbtn.Size = new System.Drawing.Size(75, 23);
             this.Stsearchbtn.TabIndex = 28;
@@ -285,12 +287,34 @@
             this.Silb.TabIndex = 30;
             this.Silb.Text = "Student ID:";
             // 
+            // Cbtn
+            // 
+            this.Cbtn.Location = new System.Drawing.Point(165, 427);
+            this.Cbtn.Name = "Cbtn";
+            this.Cbtn.Size = new System.Drawing.Size(75, 23);
+            this.Cbtn.TabIndex = 32;
+            this.Cbtn.Text = "Clear";
+            this.Cbtn.UseVisualStyleBackColor = true;
+            this.Cbtn.Click += new System.EventHandler(this.Cbtn_Click);
+            // 
+            // lobnt
+            // 
+            this.lobnt.Location = new System.Drawing.Point(165, 467);
+            this.lobnt.Name = "lobnt";
+            this.lobnt.Size = new System.Drawing.Size(75, 23);
+            this.lobnt.TabIndex = 33;
+            this.lobnt.Text = "Load";
+            this.lobnt.UseVisualStyleBackColor = true;
+            this.lobnt.Click += new System.EventHandler(this.lobnt_Click);
+            // 
             // StudentRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.lobnt);
+            this.Controls.Add(this.Cbtn);
             this.Controls.Add(this.Sitxt);
             this.Controls.Add(this.Silb);
             this.Controls.Add(this.button5);
@@ -353,5 +377,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox Sitxt;
         private System.Windows.Forms.Label Silb;
+        private System.Windows.Forms.Button Cbtn;
+        private System.Windows.Forms.Button lobnt;
     }
 }

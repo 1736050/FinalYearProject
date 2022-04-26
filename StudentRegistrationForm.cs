@@ -97,17 +97,34 @@ namespace FinalYearProject
             Reset();
         }
 
-        private void Stupdatebtn_Click(object sender, EventArgs e)
+        private void Stupdatebtn_Click(object sender, EventArgs e) 
         {
-            Con.Open();
-            SqlCommand cmd = Con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update StudentRegistrationTable set where Firstname='" + Fntxt.Text + "'";
-            cmd.ExecuteNonQuery();
-            Con.Close();
-            ShowSR();
-            MessageBox.Show("Record deleted Successfully");
-            Reset();
+            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" || Pntxt.Text == "" || Adtxt.Text == "")
+            {
+                MessageBox.Show("Missing Inforamtion");
+            }
+            else
+            {
+                try
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    Con.Open();
+
+                    sda.UpdateCommand = new SqlCommand("update StudentRegistrationTable set Firstname='" + Fntxt.Text + "',Surname= '" + Sntxt.Text + "', Dob='" + Dbtxt.Text + "'," +
+                        " Gender='" + Gntxt.Text + "',Course='" + Cotxt.Text + "',Phonenumber='" + Pntxt.Text + "',Address='" + Pntxt.Text + "' where StudentId='" + Sitxt.Text + "' ", Con);
+                    sda.UpdateCommand.ExecuteNonQuery();
+
+                    Con.Close();
+                    MessageBox.Show("record updated");
+                    ShowSR();
+                    Reset();
+                }
+                catch (Exception Ex)
+                {
+
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
 
         private void StDGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -125,7 +142,119 @@ namespace FinalYearProject
 
         private void Stsearchbtn_Click(object sender, EventArgs e)
         {
+            Con.Open();
+            SqlCommand cmd = Con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
 
+            try
+            {
+                if (Fntxt.Text.Length > 0 || Sntxt.Text.Length > 0)
+                {
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where Firstname='" + Fntxt.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+
+                else if (Sntxt.Text.Length > 0)
+                {
+
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where Surname='" + Sntxt.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+
+                   else if (Dbtxt.Text.Length > 0)
+                       {
+
+
+                             cmd.CommandText = "select * from StudentRegistrationTable where Dob='" + Dbtxt.Text + "'";
+                cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+                else if (Gntxt.Text.Length > 0)
+                {
+
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where Gender='" + Gntxt.Text + "'";
+                     
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+                else if (Cotxt.Text.Length > 0)
+                {
+
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where Course='" + Cotxt.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+                else if (Pntxt.Text.Length > 0)
+                {
+
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where Phonenumber='" + Pntxt.Text + "'";
+                     cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+                else if (Adtxt.Text.Length > 0)
+                {
+
+
+                    cmd.CommandText = "select * from StudentRegistrationTable where Address='" + Adtxt.Text + "'";
+                     cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    StDGV.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("No Information is provided to search the records");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            
+            
+
+            Con.Close();
+            
         }
+
+        private void Cbtn_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void lobnt_Click(object sender, EventArgs e)
+        {
+            ShowSR();
+        }
+
+       
     }
 }
