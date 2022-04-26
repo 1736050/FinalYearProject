@@ -30,7 +30,6 @@
         {
             this.StDGV = new System.Windows.Forms.DataGridView();
             this.Dbtxt = new System.Windows.Forms.DateTimePicker();
-            this.Cotxt = new System.Windows.Forms.ComboBox();
             this.Gntxt = new System.Windows.Forms.ComboBox();
             this.Teimlb = new System.Windows.Forms.Label();
             this.Adtxt = new System.Windows.Forms.TextBox();
@@ -59,6 +58,7 @@
             this.Imbox = new System.Windows.Forms.PictureBox();
             this.Imbtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Cotxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imbox)).BeginInit();
             this.SuspendLayout();
@@ -79,14 +79,6 @@
             this.Dbtxt.Name = "Dbtxt";
             this.Dbtxt.Size = new System.Drawing.Size(121, 18);
             this.Dbtxt.TabIndex = 43;
-            // 
-            // Cotxt
-            // 
-            this.Cotxt.FormattingEnabled = true;
-            this.Cotxt.Location = new System.Drawing.Point(110, 217);
-            this.Cotxt.Name = "Cotxt";
-            this.Cotxt.Size = new System.Drawing.Size(121, 21);
-            this.Cotxt.TabIndex = 42;
             // 
             // Gntxt
             // 
@@ -314,6 +306,7 @@
             this.Citxt.Name = "Citxt";
             this.Citxt.Size = new System.Drawing.Size(121, 21);
             this.Citxt.TabIndex = 57;
+            this.Citxt.SelectionChangeCommitted += new System.EventHandler(this.Citxt_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -349,12 +342,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // Cotxt
+            // 
+            this.Cotxt.Enabled = false;
+            this.Cotxt.Location = new System.Drawing.Point(111, 217);
+            this.Cotxt.Name = "Cotxt";
+            this.Cotxt.Size = new System.Drawing.Size(120, 20);
+            this.Cotxt.TabIndex = 59;
+            // 
             // TeacherRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.Cotxt);
             this.Controls.Add(this.Imbtn);
             this.Controls.Add(this.Citxt);
             this.Controls.Add(this.label2);
@@ -371,7 +373,6 @@
             this.Controls.Add(this.StDGV);
             this.Controls.Add(this.Imbox);
             this.Controls.Add(this.Dbtxt);
-            this.Controls.Add(this.Cotxt);
             this.Controls.Add(this.Gntxt);
             this.Controls.Add(this.Teimlb);
             this.Controls.Add(this.Adtxt);
@@ -403,7 +404,6 @@
         private System.Windows.Forms.DataGridView StDGV;
         private System.Windows.Forms.PictureBox Imbox;
         private System.Windows.Forms.DateTimePicker Dbtxt;
-        private System.Windows.Forms.ComboBox Cotxt;
         private System.Windows.Forms.ComboBox Gntxt;
         private System.Windows.Forms.Label Teimlb;
         private System.Windows.Forms.TextBox Adtxt;
@@ -431,5 +431,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Imbtn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox Cotxt;
     }
 }

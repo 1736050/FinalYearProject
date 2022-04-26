@@ -18,6 +18,8 @@ namespace FinalYearProject
         {
             InitializeComponent();
             ShowSR();
+            getcourseId();
+            getcoursename()
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mhamz\Documents\FinalYearProjectdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +31,51 @@ namespace FinalYearProject
         {
 
         }
+        private void getcourseId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select CourseId from CourseTable", Con);
+            SqlDataReader r;
+            r = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(r);
+           // dt.Columns.Add("CourseId", typeof(int));
+            Citxt.ValueMember = "CourseId";
+            Citxt.DataSource = dt;
+            Con.Close();
 
+
+        }
+        public void getcoursename()
+        {
+            Con.Open();
+            string Qeruy = "Select * from CourseTable where CourseId=" + Citxt.SelectedValue.ToString() + "";
+            SqlCommand cmd = new SqlCommand(Qeruy, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Cotxt.Text = dr["Coursename"].ToString();
+
+            }
+            Con.Close();
+        }
+        private void getmodulename()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select Modulename from ModuleTable", Con);
+            SqlDataReader r;
+            r = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(r);
+            // dt.Columns.Add("CourseId", typeof(int));
+            Mdtxt.ValueMember = "Modulename";
+            Mdtxt.DataSource = dt;
+            Con.Close();
+
+
+        }
         private void ShowSR()
         {
             Con.Open();
@@ -53,7 +99,7 @@ namespace FinalYearProject
             Mdtxt.Text = "";
             Pntxt.Text = "";
             Adtxt.Text = "";
-            //   Imbox.Image = null;
+            Imbox.Image = null;
         }
 
         private void StDGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -309,6 +355,11 @@ namespace FinalYearProject
             }
 
         
+        }
+
+        private void Citxt_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            getcoursename();
         }
     }
 }
