@@ -40,7 +40,6 @@
             this.CId2lb = new System.Windows.Forms.Label();
             this.Cn2lb = new System.Windows.Forms.Label();
             this.Citxt2 = new System.Windows.Forms.ComboBox();
-            this.Cntxt2 = new System.Windows.Forms.ComboBox();
             this.StDGV = new System.Windows.Forms.DataGridView();
             this.StDGV2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.Stremovebtn2 = new System.Windows.Forms.Button();
             this.StAddbtn2 = new System.Windows.Forms.Button();
             this.Stupdatebtn2 = new System.Windows.Forms.Button();
+            this.Cntxt2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV2)).BeginInit();
             this.SuspendLayout();
@@ -164,14 +164,7 @@
             this.Citxt2.Name = "Citxt2";
             this.Citxt2.Size = new System.Drawing.Size(121, 21);
             this.Citxt2.TabIndex = 17;
-            // 
-            // Cntxt2
-            // 
-            this.Cntxt2.FormattingEnabled = true;
-            this.Cntxt2.Location = new System.Drawing.Point(514, 123);
-            this.Cntxt2.Name = "Cntxt2";
-            this.Cntxt2.Size = new System.Drawing.Size(121, 21);
-            this.Cntxt2.TabIndex = 18;
+            this.Citxt2.SelectionChangeCommitted += new System.EventHandler(this.Citxt2_SelectionChangeCommitted);
             // 
             // StDGV
             // 
@@ -334,12 +327,21 @@
             this.Stupdatebtn2.UseVisualStyleBackColor = true;
             this.Stupdatebtn2.Click += new System.EventHandler(this.Stupdatebtn2_Click);
             // 
+            // Cntxt2
+            // 
+            this.Cntxt2.Enabled = false;
+            this.Cntxt2.Location = new System.Drawing.Point(514, 122);
+            this.Cntxt2.Name = "Cntxt2";
+            this.Cntxt2.Size = new System.Drawing.Size(120, 20);
+            this.Cntxt2.TabIndex = 66;
+            // 
             // MisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.Cntxt2);
             this.Controls.Add(this.lobnt2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Stsearchbtn2);
@@ -356,7 +358,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StDGV2);
             this.Controls.Add(this.StDGV);
-            this.Controls.Add(this.Cntxt2);
             this.Controls.Add(this.Citxt2);
             this.Controls.Add(this.Cn2lb);
             this.Controls.Add(this.CId2lb);
@@ -394,7 +395,6 @@
         private System.Windows.Forms.Label CId2lb;
         private System.Windows.Forms.Label Cn2lb;
         private System.Windows.Forms.ComboBox Citxt2;
-        private System.Windows.Forms.ComboBox Cntxt2;
         private System.Windows.Forms.DataGridView StDGV;
         private System.Windows.Forms.DataGridView StDGV2;
         private System.Windows.Forms.Label label1;
@@ -411,5 +411,6 @@
         private System.Windows.Forms.Button Stremovebtn2;
         private System.Windows.Forms.Button StAddbtn2;
         private System.Windows.Forms.Button Stupdatebtn2;
+        private System.Windows.Forms.TextBox Cntxt2;
     }
 }

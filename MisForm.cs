@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace FinalYearProject
 {
@@ -18,13 +19,43 @@ namespace FinalYearProject
             InitializeComponent();
             ShowSR();
             ShowSR2();
+            getcourseId();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mhamz\Documents\FinalYearProjectdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+        private void getcourseId()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("Select CourseId from CourseTable", Con);
+            SqlDataReader r;
+            r = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(r);
+            // dt.Columns.Add("CourseId", typeof(int));
+            Citxt2.ValueMember = "CourseId";
+            Citxt2.DataSource = dt;
+            Con.Close();
 
+
+        }
+        public void getcoursename()
+        {
+            Con.Open();
+            string Qeruy = "Select * from CourseTable where CourseId=" + Citxt2.SelectedValue.ToString() + "";
+            SqlCommand cmd = new SqlCommand(Qeruy, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                Cntxt2.Text = dr["Coursename"].ToString();
+
+            }
+            Con.Close();
+        }
         private void ShowSR()
         {
             Con.Open();
@@ -373,6 +404,11 @@ namespace FinalYearProject
 
 
             Con.Close();
+        }
+
+        private void Citxt2_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            getcoursename();
         }
     }
 }
