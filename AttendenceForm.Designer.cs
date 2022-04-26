@@ -35,9 +35,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(231, 34);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(712, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(507, 408);
             this.dataGridView1.TabIndex = 0;
             // 
             // AttendenceForm
