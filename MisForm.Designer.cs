@@ -33,34 +33,38 @@
             this.Cflb = new System.Windows.Forms.Label();
             this.Cntxt = new System.Windows.Forms.TextBox();
             this.Cnlb = new System.Windows.Forms.Label();
-            this.Cidtxt = new System.Windows.Forms.TextBox();
+            this.Citxt = new System.Windows.Forms.TextBox();
             this.Cidlb = new System.Windows.Forms.Label();
-            this.Mtxt = new System.Windows.Forms.TextBox();
+            this.Mntxt = new System.Windows.Forms.TextBox();
             this.Mlb = new System.Windows.Forms.Label();
             this.CId2lb = new System.Windows.Forms.Label();
             this.Cn2lb = new System.Windows.Forms.Label();
-            this.Coursecomb = new System.Windows.Forms.ComboBox();
-            this.Coursenamecomb = new System.Windows.Forms.ComboBox();
-            this.Searchbtn = new System.Windows.Forms.Button();
-            this.Removebtn = new System.Windows.Forms.Button();
-            this.Addbtn = new System.Windows.Forms.Button();
-            this.Updatebtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Searchbtn2 = new System.Windows.Forms.Button();
-            this.Removebtn2 = new System.Windows.Forms.Button();
-            this.Addbtn2 = new System.Windows.Forms.Button();
-            this.UpdateBtn2 = new System.Windows.Forms.Button();
+            this.Citxt2 = new System.Windows.Forms.ComboBox();
+            this.Cntxt2 = new System.Windows.Forms.ComboBox();
+            this.StDGV = new System.Windows.Forms.DataGridView();
+            this.StDGV2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.lobnt = new System.Windows.Forms.Button();
+            this.Cbtn = new System.Windows.Forms.Button();
+            this.Stsearchbtn = new System.Windows.Forms.Button();
+            this.Stremovebtn = new System.Windows.Forms.Button();
+            this.StAddbtn = new System.Windows.Forms.Button();
+            this.Stupdatebtn = new System.Windows.Forms.Button();
+            this.lobnt2 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Stsearchbtn2 = new System.Windows.Forms.Button();
+            this.Stremovebtn2 = new System.Windows.Forms.Button();
+            this.StAddbtn2 = new System.Windows.Forms.Button();
+            this.Stupdatebtn2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StDGV2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Location = new System.Drawing.Point(356, 6);
+            this.panel1.Location = new System.Drawing.Point(364, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(11, 503);
             this.panel1.TabIndex = 0;
@@ -99,12 +103,12 @@
             this.Cnlb.TabIndex = 8;
             this.Cnlb.Text = "Course Name:";
             // 
-            // Cidtxt
+            // Citxt
             // 
-            this.Cidtxt.Location = new System.Drawing.Point(129, 51);
-            this.Cidtxt.Name = "Cidtxt";
-            this.Cidtxt.Size = new System.Drawing.Size(120, 20);
-            this.Cidtxt.TabIndex = 7;
+            this.Citxt.Location = new System.Drawing.Point(129, 51);
+            this.Citxt.Name = "Citxt";
+            this.Citxt.Size = new System.Drawing.Size(120, 20);
+            this.Citxt.TabIndex = 7;
             // 
             // Cidlb
             // 
@@ -116,28 +120,28 @@
             this.Cidlb.TabIndex = 6;
             this.Cidlb.Text = "Course ID:";
             // 
-            // Mtxt
+            // Mntxt
             // 
-            this.Mtxt.Location = new System.Drawing.Point(503, 45);
-            this.Mtxt.Name = "Mtxt";
-            this.Mtxt.Size = new System.Drawing.Size(120, 20);
-            this.Mtxt.TabIndex = 13;
+            this.Mntxt.Location = new System.Drawing.Point(514, 45);
+            this.Mntxt.Name = "Mntxt";
+            this.Mntxt.Size = new System.Drawing.Size(120, 20);
+            this.Mntxt.TabIndex = 13;
             // 
             // Mlb
             // 
             this.Mlb.AutoSize = true;
             this.Mlb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Mlb.Location = new System.Drawing.Point(418, 48);
+            this.Mlb.Location = new System.Drawing.Point(429, 48);
             this.Mlb.Name = "Mlb";
-            this.Mlb.Size = new System.Drawing.Size(70, 13);
+            this.Mlb.Size = new System.Drawing.Size(76, 13);
             this.Mlb.TabIndex = 12;
-            this.Mlb.Text = "Modul Name:";
+            this.Mlb.Text = "Module Name:";
             // 
             // CId2lb
             // 
             this.CId2lb.AutoSize = true;
             this.CId2lb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.CId2lb.Location = new System.Drawing.Point(418, 88);
+            this.CId2lb.Location = new System.Drawing.Point(429, 88);
             this.CId2lb.Name = "CId2lb";
             this.CId2lb.Size = new System.Drawing.Size(57, 13);
             this.CId2lb.TabIndex = 14;
@@ -147,115 +151,45 @@
             // 
             this.Cn2lb.AutoSize = true;
             this.Cn2lb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Cn2lb.Location = new System.Drawing.Point(418, 126);
+            this.Cn2lb.Location = new System.Drawing.Point(429, 126);
             this.Cn2lb.Name = "Cn2lb";
             this.Cn2lb.Size = new System.Drawing.Size(74, 13);
             this.Cn2lb.TabIndex = 16;
             this.Cn2lb.Text = "Course Name:";
             // 
-            // Coursecomb
+            // Citxt2
             // 
-            this.Coursecomb.FormattingEnabled = true;
-            this.Coursecomb.Location = new System.Drawing.Point(503, 82);
-            this.Coursecomb.Name = "Coursecomb";
-            this.Coursecomb.Size = new System.Drawing.Size(121, 21);
-            this.Coursecomb.TabIndex = 17;
+            this.Citxt2.FormattingEnabled = true;
+            this.Citxt2.Location = new System.Drawing.Point(514, 82);
+            this.Citxt2.Name = "Citxt2";
+            this.Citxt2.Size = new System.Drawing.Size(121, 21);
+            this.Citxt2.TabIndex = 17;
             // 
-            // Coursenamecomb
+            // Cntxt2
             // 
-            this.Coursenamecomb.FormattingEnabled = true;
-            this.Coursenamecomb.Location = new System.Drawing.Point(503, 123);
-            this.Coursenamecomb.Name = "Coursenamecomb";
-            this.Coursenamecomb.Size = new System.Drawing.Size(121, 21);
-            this.Coursenamecomb.TabIndex = 18;
+            this.Cntxt2.FormattingEnabled = true;
+            this.Cntxt2.Location = new System.Drawing.Point(514, 123);
+            this.Cntxt2.Name = "Cntxt2";
+            this.Cntxt2.Size = new System.Drawing.Size(121, 21);
+            this.Cntxt2.TabIndex = 18;
             // 
-            // Searchbtn
+            // StDGV
             // 
-            this.Searchbtn.Location = new System.Drawing.Point(188, 173);
-            this.Searchbtn.Name = "Searchbtn";
-            this.Searchbtn.Size = new System.Drawing.Size(75, 23);
-            this.Searchbtn.TabIndex = 32;
-            this.Searchbtn.Text = "Search";
-            this.Searchbtn.UseVisualStyleBackColor = true;
+            this.StDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StDGV.Location = new System.Drawing.Point(12, 273);
+            this.StDGV.Name = "StDGV";
+            this.StDGV.Size = new System.Drawing.Size(329, 174);
+            this.StDGV.TabIndex = 33;
+            this.StDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StDGV_CellClick);
             // 
-            // Removebtn
+            // StDGV2
             // 
-            this.Removebtn.Location = new System.Drawing.Point(188, 218);
-            this.Removebtn.Name = "Removebtn";
-            this.Removebtn.Size = new System.Drawing.Size(75, 23);
-            this.Removebtn.TabIndex = 31;
-            this.Removebtn.Text = "Remove";
-            this.Removebtn.UseVisualStyleBackColor = true;
-            // 
-            // Addbtn
-            // 
-            this.Addbtn.Location = new System.Drawing.Point(83, 173);
-            this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(75, 23);
-            this.Addbtn.TabIndex = 30;
-            this.Addbtn.Text = "Add";
-            this.Addbtn.UseVisualStyleBackColor = true;
-            // 
-            // Updatebtn
-            // 
-            this.Updatebtn.Location = new System.Drawing.Point(83, 218);
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(75, 23);
-            this.Updatebtn.TabIndex = 29;
-            this.Updatebtn.Text = "Update";
-            this.Updatebtn.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 273);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(329, 174);
-            this.dataGridView1.TabIndex = 33;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(373, 273);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(366, 174);
-            this.dataGridView2.TabIndex = 34;
-            // 
-            // Searchbtn2
-            // 
-            this.Searchbtn2.Location = new System.Drawing.Point(548, 173);
-            this.Searchbtn2.Name = "Searchbtn2";
-            this.Searchbtn2.Size = new System.Drawing.Size(75, 23);
-            this.Searchbtn2.TabIndex = 38;
-            this.Searchbtn2.Text = "Search";
-            this.Searchbtn2.UseVisualStyleBackColor = true;
-            // 
-            // Removebtn2
-            // 
-            this.Removebtn2.Location = new System.Drawing.Point(548, 218);
-            this.Removebtn2.Name = "Removebtn2";
-            this.Removebtn2.Size = new System.Drawing.Size(75, 23);
-            this.Removebtn2.TabIndex = 37;
-            this.Removebtn2.Text = "Remove";
-            this.Removebtn2.UseVisualStyleBackColor = true;
-            // 
-            // Addbtn2
-            // 
-            this.Addbtn2.Location = new System.Drawing.Point(443, 173);
-            this.Addbtn2.Name = "Addbtn2";
-            this.Addbtn2.Size = new System.Drawing.Size(75, 23);
-            this.Addbtn2.TabIndex = 36;
-            this.Addbtn2.Text = "Add";
-            this.Addbtn2.UseVisualStyleBackColor = true;
-            // 
-            // UpdateBtn2
-            // 
-            this.UpdateBtn2.Location = new System.Drawing.Point(443, 218);
-            this.UpdateBtn2.Name = "UpdateBtn2";
-            this.UpdateBtn2.Size = new System.Drawing.Size(75, 23);
-            this.UpdateBtn2.TabIndex = 35;
-            this.UpdateBtn2.Text = "Update";
-            this.UpdateBtn2.UseVisualStyleBackColor = true;
+            this.StDGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StDGV2.Location = new System.Drawing.Point(391, 273);
+            this.StDGV2.Name = "StDGV2";
+            this.StDGV2.Size = new System.Drawing.Size(348, 174);
+            this.StDGV2.TabIndex = 34;
+            this.StDGV2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StDGV2_CellClick);
             // 
             // label1
             // 
@@ -274,11 +208,131 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(522, 6);
+            this.label2.Location = new System.Drawing.Point(533, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 40;
             this.label2.Text = "Modules";
+            // 
+            // lobnt
+            // 
+            this.lobnt.Location = new System.Drawing.Point(188, 229);
+            this.lobnt.Name = "lobnt";
+            this.lobnt.Size = new System.Drawing.Size(75, 23);
+            this.lobnt.TabIndex = 59;
+            this.lobnt.Text = "Load";
+            this.lobnt.UseVisualStyleBackColor = true;
+            this.lobnt.Click += new System.EventHandler(this.lobnt_Click);
+            // 
+            // Cbtn
+            // 
+            this.Cbtn.Location = new System.Drawing.Point(188, 200);
+            this.Cbtn.Name = "Cbtn";
+            this.Cbtn.Size = new System.Drawing.Size(75, 23);
+            this.Cbtn.TabIndex = 58;
+            this.Cbtn.Text = "Clear";
+            this.Cbtn.UseVisualStyleBackColor = true;
+            this.Cbtn.Click += new System.EventHandler(this.Cbtn_Click);
+            // 
+            // Stsearchbtn
+            // 
+            this.Stsearchbtn.Location = new System.Drawing.Point(107, 165);
+            this.Stsearchbtn.Name = "Stsearchbtn";
+            this.Stsearchbtn.Size = new System.Drawing.Size(75, 23);
+            this.Stsearchbtn.TabIndex = 57;
+            this.Stsearchbtn.Text = "Search";
+            this.Stsearchbtn.UseVisualStyleBackColor = true;
+            this.Stsearchbtn.Click += new System.EventHandler(this.Stsearchbtn_Click);
+            // 
+            // Stremovebtn
+            // 
+            this.Stremovebtn.Location = new System.Drawing.Point(107, 229);
+            this.Stremovebtn.Name = "Stremovebtn";
+            this.Stremovebtn.Size = new System.Drawing.Size(75, 23);
+            this.Stremovebtn.TabIndex = 56;
+            this.Stremovebtn.Text = "Remove";
+            this.Stremovebtn.UseVisualStyleBackColor = true;
+            this.Stremovebtn.Click += new System.EventHandler(this.Stremovebtn_Click);
+            // 
+            // StAddbtn
+            // 
+            this.StAddbtn.Location = new System.Drawing.Point(188, 165);
+            this.StAddbtn.Name = "StAddbtn";
+            this.StAddbtn.Size = new System.Drawing.Size(75, 23);
+            this.StAddbtn.TabIndex = 55;
+            this.StAddbtn.Text = "Add";
+            this.StAddbtn.UseVisualStyleBackColor = true;
+            this.StAddbtn.Click += new System.EventHandler(this.StAddbtn_Click);
+            // 
+            // Stupdatebtn
+            // 
+            this.Stupdatebtn.Location = new System.Drawing.Point(107, 200);
+            this.Stupdatebtn.Name = "Stupdatebtn";
+            this.Stupdatebtn.Size = new System.Drawing.Size(75, 23);
+            this.Stupdatebtn.TabIndex = 54;
+            this.Stupdatebtn.Text = "Update";
+            this.Stupdatebtn.UseVisualStyleBackColor = true;
+            this.Stupdatebtn.Click += new System.EventHandler(this.Stupdatebtn_Click);
+            // 
+            // lobnt2
+            // 
+            this.lobnt2.Location = new System.Drawing.Point(570, 229);
+            this.lobnt2.Name = "lobnt2";
+            this.lobnt2.Size = new System.Drawing.Size(75, 23);
+            this.lobnt2.TabIndex = 65;
+            this.lobnt2.Text = "Load";
+            this.lobnt2.UseVisualStyleBackColor = true;
+            this.lobnt2.Click += new System.EventHandler(this.lobnt2_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(570, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 64;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Stsearchbtn2
+            // 
+            this.Stsearchbtn2.Location = new System.Drawing.Point(489, 165);
+            this.Stsearchbtn2.Name = "Stsearchbtn2";
+            this.Stsearchbtn2.Size = new System.Drawing.Size(75, 23);
+            this.Stsearchbtn2.TabIndex = 63;
+            this.Stsearchbtn2.Text = "Search";
+            this.Stsearchbtn2.UseVisualStyleBackColor = true;
+            this.Stsearchbtn2.Click += new System.EventHandler(this.Stsearchbtn2_Click);
+            // 
+            // Stremovebtn2
+            // 
+            this.Stremovebtn2.Location = new System.Drawing.Point(489, 229);
+            this.Stremovebtn2.Name = "Stremovebtn2";
+            this.Stremovebtn2.Size = new System.Drawing.Size(75, 23);
+            this.Stremovebtn2.TabIndex = 62;
+            this.Stremovebtn2.Text = "Remove";
+            this.Stremovebtn2.UseVisualStyleBackColor = true;
+            this.Stremovebtn2.Click += new System.EventHandler(this.Stremovebtn2_Click);
+            // 
+            // StAddbtn2
+            // 
+            this.StAddbtn2.Location = new System.Drawing.Point(570, 165);
+            this.StAddbtn2.Name = "StAddbtn2";
+            this.StAddbtn2.Size = new System.Drawing.Size(75, 23);
+            this.StAddbtn2.TabIndex = 61;
+            this.StAddbtn2.Text = "Add";
+            this.StAddbtn2.UseVisualStyleBackColor = true;
+            this.StAddbtn2.Click += new System.EventHandler(this.StAddbtn2_Click);
+            // 
+            // Stupdatebtn2
+            // 
+            this.Stupdatebtn2.Location = new System.Drawing.Point(489, 200);
+            this.Stupdatebtn2.Name = "Stupdatebtn2";
+            this.Stupdatebtn2.Size = new System.Drawing.Size(75, 23);
+            this.Stupdatebtn2.TabIndex = 60;
+            this.Stupdatebtn2.Text = "Update";
+            this.Stupdatebtn2.UseVisualStyleBackColor = true;
+            this.Stupdatebtn2.Click += new System.EventHandler(this.Stupdatebtn2_Click);
             // 
             // MisForm
             // 
@@ -286,37 +340,41 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(765, 521);
+            this.Controls.Add(this.lobnt2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Stsearchbtn2);
+            this.Controls.Add(this.Stremovebtn2);
+            this.Controls.Add(this.StAddbtn2);
+            this.Controls.Add(this.Stupdatebtn2);
+            this.Controls.Add(this.lobnt);
+            this.Controls.Add(this.Cbtn);
+            this.Controls.Add(this.Stsearchbtn);
+            this.Controls.Add(this.Stremovebtn);
+            this.Controls.Add(this.StAddbtn);
+            this.Controls.Add(this.Stupdatebtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Searchbtn2);
-            this.Controls.Add(this.Removebtn2);
-            this.Controls.Add(this.Addbtn2);
-            this.Controls.Add(this.UpdateBtn2);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Searchbtn);
-            this.Controls.Add(this.Removebtn);
-            this.Controls.Add(this.Addbtn);
-            this.Controls.Add(this.Updatebtn);
-            this.Controls.Add(this.Coursenamecomb);
-            this.Controls.Add(this.Coursecomb);
+            this.Controls.Add(this.StDGV2);
+            this.Controls.Add(this.StDGV);
+            this.Controls.Add(this.Cntxt2);
+            this.Controls.Add(this.Citxt2);
             this.Controls.Add(this.Cn2lb);
             this.Controls.Add(this.CId2lb);
-            this.Controls.Add(this.Mtxt);
+            this.Controls.Add(this.Mntxt);
             this.Controls.Add(this.Mlb);
             this.Controls.Add(this.Cftxt);
             this.Controls.Add(this.Cflb);
             this.Controls.Add(this.Cntxt);
             this.Controls.Add(this.Cnlb);
-            this.Controls.Add(this.Cidtxt);
+            this.Controls.Add(this.Citxt);
             this.Controls.Add(this.Cidlb);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MisForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StDGV2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,25 +387,29 @@
         private System.Windows.Forms.Label Cflb;
         private System.Windows.Forms.TextBox Cntxt;
         private System.Windows.Forms.Label Cnlb;
-        private System.Windows.Forms.TextBox Cidtxt;
+        private System.Windows.Forms.TextBox Citxt;
         private System.Windows.Forms.Label Cidlb;
-        private System.Windows.Forms.TextBox Mtxt;
+        private System.Windows.Forms.TextBox Mntxt;
         private System.Windows.Forms.Label Mlb;
         private System.Windows.Forms.Label CId2lb;
         private System.Windows.Forms.Label Cn2lb;
-        private System.Windows.Forms.ComboBox Coursecomb;
-        private System.Windows.Forms.ComboBox Coursenamecomb;
-        private System.Windows.Forms.Button Searchbtn;
-        private System.Windows.Forms.Button Removebtn;
-        private System.Windows.Forms.Button Addbtn;
-        private System.Windows.Forms.Button Updatebtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button Searchbtn2;
-        private System.Windows.Forms.Button Removebtn2;
-        private System.Windows.Forms.Button Addbtn2;
-        private System.Windows.Forms.Button UpdateBtn2;
+        private System.Windows.Forms.ComboBox Citxt2;
+        private System.Windows.Forms.ComboBox Cntxt2;
+        private System.Windows.Forms.DataGridView StDGV;
+        private System.Windows.Forms.DataGridView StDGV2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button lobnt;
+        private System.Windows.Forms.Button Cbtn;
+        private System.Windows.Forms.Button Stsearchbtn;
+        private System.Windows.Forms.Button Stremovebtn;
+        private System.Windows.Forms.Button StAddbtn;
+        private System.Windows.Forms.Button Stupdatebtn;
+        private System.Windows.Forms.Button lobnt2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Stsearchbtn2;
+        private System.Windows.Forms.Button Stremovebtn2;
+        private System.Windows.Forms.Button StAddbtn2;
+        private System.Windows.Forms.Button Stupdatebtn2;
     }
 }

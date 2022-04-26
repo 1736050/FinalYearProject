@@ -51,7 +51,7 @@ namespace FinalYearProject
         }
         private void StAddbtn_Click(object sender, EventArgs e)
         {
-            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" ||  Pntxt.Text == "" || Adtxt.Text == "")
+            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" ||  Pntxt.Text == "" || Adtxt.Text == "" || Cotxt.Text == "")
             {
                 MessageBox.Show("Missing Inforamtion");
             }
@@ -86,20 +86,28 @@ namespace FinalYearProject
         
         private void Stremovebtn_Click(object sender, EventArgs e)
         {
-            Con.Open();
-           SqlCommand cmd = Con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from StudentRegistrationTable where Firstname='" + Fntxt.Text + "'";
-            cmd.ExecuteNonQuery();
-            Con.Close();
-            ShowSR();
-            MessageBox.Show("Record deleted Successfully");
-            Reset();
+
+            if (Fntxt.Text.Length > 0)
+            {
+                Con.Open();
+                SqlCommand cmd = Con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from StudentRegistrationTable where Firstname='" + Fntxt.Text + "'";
+                cmd.ExecuteNonQuery();
+                Con.Close();
+                ShowSR();
+                MessageBox.Show("Record deleted Successfully");
+                Reset();
+            }
+            else
+            {
+                MessageBox.Show("No record is selscted");
+            }
         }
 
         private void Stupdatebtn_Click(object sender, EventArgs e) 
         {
-            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" || Pntxt.Text == "" || Adtxt.Text == "")
+            if (Fntxt.Text == "" || Sntxt.Text == "" || Dbtxt.Text == "" || Gntxt.Text == "" || Pntxt.Text == "" || Adtxt.Text == ""|| Cotxt.Text == "")
             {
                 MessageBox.Show("Missing Inforamtion");
             }
@@ -148,7 +156,7 @@ namespace FinalYearProject
 
             try
             {
-                if (Fntxt.Text.Length > 0 || Sntxt.Text.Length > 0)
+                if (Fntxt.Text.Length > 0)
                 {
 
                     cmd.CommandText = "select * from StudentRegistrationTable where Firstname='" + Fntxt.Text + "'";
