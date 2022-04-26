@@ -19,7 +19,9 @@ namespace FinalYearProject
             InitializeComponent();
             ShowSR();
             getcourseId();
-            getcoursename()
+            getModulename();
+
+
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mhamz\Documents\FinalYearProjectdb.mdf;Integrated Security=True;Connect Timeout=30");
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace FinalYearProject
             }
             Con.Close();
         }
-        private void getmodulename()
+        private void getModulename()
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand("Select Modulename from ModuleTable", Con);
