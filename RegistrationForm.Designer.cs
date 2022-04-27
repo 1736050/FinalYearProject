@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Softwarenamelb = new System.Windows.Forms.Label();
             this.Closewindowbt = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.Stsearchbtn = new System.Windows.Forms.Button();
             this.Stremovebtn = new System.Windows.Forms.Button();
             this.Stupdatebtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StDGV)).BeginInit();
@@ -67,6 +67,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(484, 78);
             this.panel3.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.Location = new System.Drawing.Point(455, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(26, 23);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -183,6 +198,7 @@
             // 
             this.Pstxt.Location = new System.Drawing.Point(188, 168);
             this.Pstxt.Name = "Pstxt";
+            this.Pstxt.PasswordChar = '*';
             this.Pstxt.Size = new System.Drawing.Size(159, 20);
             this.Pstxt.TabIndex = 24;
             // 
@@ -197,6 +213,7 @@
             // 
             this.Pstxt2.Location = new System.Drawing.Point(188, 203);
             this.Pstxt2.Name = "Pstxt2";
+            this.Pstxt2.PasswordChar = '*';
             this.Pstxt2.Size = new System.Drawing.Size(159, 20);
             this.Pstxt2.TabIndex = 27;
             // 
@@ -270,21 +287,6 @@
             this.Stupdatebtn.Text = "Update";
             this.Stupdatebtn.UseVisualStyleBackColor = true;
             this.Stupdatebtn.Click += new System.EventHandler(this.Stupdatebtn_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Location = new System.Drawing.Point(455, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 23);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RegistrationForm
             // 

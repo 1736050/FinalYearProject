@@ -133,6 +133,7 @@
             // 
             this.Pstxt.Location = new System.Drawing.Point(210, 222);
             this.Pstxt.Name = "Pstxt";
+            this.Pstxt.PasswordChar = '*';
             this.Pstxt.Size = new System.Drawing.Size(159, 20);
             this.Pstxt.TabIndex = 70;
             // 
