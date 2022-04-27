@@ -117,6 +117,8 @@ namespace FinalYearProject
             Mdtxt.Text = StDGV.Rows[e.RowIndex].Cells["Modulename"].Value.ToString();
             Pntxt.Text = StDGV.Rows[e.RowIndex].Cells["Phonenumber"].Value.ToString();
             Adtxt.Text = StDGV.Rows[e.RowIndex].Cells["Address"].Value.ToString();
+           // MemoryStream m = new MemoryStream((byte[])StDGV.CurrentRow.Cells[8].Value);
+         //   Imbox.Image = Image.FromStream(m);
         }
 
         private void lobnt_Click(object sender, EventArgs e)
