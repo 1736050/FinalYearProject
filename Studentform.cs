@@ -51,6 +51,12 @@ namespace FinalYearProject
             SubLogin subLoginlo = new SubLogin();
             subLoginlo.Show();
             this.Hide();
+
+            /*  Use this code to logeout onto the user loginpage instead of sublogin.
+          * LoginForm lg = new LoginForm();
+           lg.Show();
+           this.Hide();
+         */
         }
     }
 }
