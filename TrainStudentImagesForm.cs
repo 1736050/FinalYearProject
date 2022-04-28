@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Emgu.CV;
+using Emgu.CV.Structure;
+using Emgu.CV.Face;
+using Emgu.CV.CvEnum;
+
 
 namespace FinalYearProject
 {
@@ -15,6 +20,11 @@ namespace FinalYearProject
         public TrainStudentImagesForm()
         {
             InitializeComponent();
+        }
+
+        private void Cpbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
